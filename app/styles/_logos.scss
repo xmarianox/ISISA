@@ -1,0 +1,12 @@
+// logos.scss
+.logo {
+	display: block;
+	text-indent: -9999px;
+	cursor: pointer;
+	
+	&.logo_isisa {
+		background: url(../images/logo_isisa.svg) center center no-repeat;
+		background-size: cover;
+		@include size(161px, 41px);
+	}
+}

@@ -1,0 +1,90 @@
+// bower:scss
+// endbower
+
+/**
+ *  Author  : Mariano Molina @xsincrueldadx
+ *  Proyect : ISISA
+ *  Date    : 5/11/2015
+ */
+// imports
+@import 'reset';
+@import 'variables';
+@import 'mixins';
+@import 'logos';
+
+// theme
+body {
+  background: $black;
+  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  color: $white;
+  position: relative;
+}
+// header
+header {
+  background: $gray-2;
+  @include size(100%, 64px);
+  padding: 12px 16px;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 5;
+}
+// contenidos
+article {
+  @include size(100%, auto);
+  margin-top: 64px;
+}
+section {
+  @include size(100%, 600px);
+  overflow: hidden;
+  position: relative;
+
+  &#mezclas {
+    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+  }
+
+  &#mercados {
+    @include background-fixed('../images/mercados/bg-mercados.jpg', 50%, 50%); 
+  }
+
+  &#laboratorio {
+    @include background-fixed('../images/laboratorio/bg-laboratorio.jpg', 50%, 50%); 
+  }
+
+  &#instalaciones {
+    @include background-fixed('../images/instalaciones/bg-instalaciones.jpg', 50%, 50%); 
+  }
+
+  &#logistica {
+    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+  }
+
+  &#partners {
+    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+  }
+
+  &#contacto {
+    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+  }
+}
+/* // Intro video
+.video_wrapper {
+  background: #000;
+  width: 100%;
+  max-height: 715px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.video {
+  min-height: 715px;
+  min-width: 100%;
+  opacity: .9;
+  z-index: 1;
+  -webkit-transition: opacity 1500ms linear;
+  -moz-transition: opacity 1500ms linear;
+  transition: opacity 1500ms linear;
+} */
