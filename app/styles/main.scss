@@ -6,6 +6,7 @@
  *  Proyect : ISISA
  *  Date    : 5/11/2015
  */
+
 // imports
 @import 'reset';
 @import 'variables';
@@ -36,7 +37,7 @@ article {
   margin-top: 64px;
 }
 section {
-  @include size(100%, 600px);
+  @include size(100%, auto);
   overflow: hidden;
   position: relative;
 
@@ -68,23 +69,30 @@ section {
     @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
   }
 }
-/* // Intro video
-.video_wrapper {
-  background: #000;
-  width: 100%;
-  max-height: 715px;
+// blue overlay
+.overlay {
+  @include size(100%, 100%);
+  background: $blue-overlay;
   position: absolute;
+  color: $white;
+  z-index: 2;
+  overflow: hidden;
   top: 0;
   left: 0;
-  z-index: 0;
-  overflow: hidden;
+  right: 0;
+  bottom: 0;
 }
-.video {
-  min-height: 715px;
-  min-width: 100%;
-  opacity: .9;
-  z-index: 1;
-  -webkit-transition: opacity 1500ms linear;
-  -moz-transition: opacity 1500ms linear;
-  transition: opacity 1500ms linear;
-} */
+#content_video {
+  @include size(100%, 100%);
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+

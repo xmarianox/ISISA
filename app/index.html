@@ -32,16 +32,16 @@
     <article>
       
       <section id="nosotros">
-        <!-- <div class="video_wrapper">
-          <video class="video js-background_video" muted="" loop="">
-            <source src="http://secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.webm" type="video/webm">
-            <source src="http://secure-c.vimeocdn.com/p/video/yosemite_hd_ii_hd.mp4" type="video/mp4">
-          </video>
-        </div> -->
 
-        <h1>Soluciones <em>innovadoras</em> <span>en compuestos de caucho</span></h1>
+        <div id="content_video">
+          <iframe src="https://player.vimeo.com/video/127196955?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+        </div>
 
-        <div class="accordeon_content">
+        <div class="overlay">
+          <h1>Soluciones <em>innovadoras</em> <span>en compuestos de caucho</span></h1>
+        </div>
+
+        <div class="accordeon_content" style="display: none">
           
           <div class="control">
             
@@ -170,7 +170,8 @@
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
-    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/jquery/dist/jquery.js"></script>
+    <script src="../bower_components/fitvids/jquery.fitvids.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 
