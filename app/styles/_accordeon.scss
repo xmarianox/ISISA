@@ -1,0 +1,65 @@
+//_accordeon.scss
+.accordeon_content {
+	@include size(100%, auto);
+	overflow: hidden;
+	margin: 0 auto;
+
+	.control {
+		display: table;
+	}
+
+	.col_25 {
+		@include size(25%, 100%);
+		display: table-cell;
+		padding: 30px 15px;
+		
+		&.blue-1 {
+			background-color: $blue-1;
+		}
+		&.blue-2 {
+			background-color: $blue-2;
+		}
+		&.blue-3 {
+			background-color: $blue-3;
+		}
+		&.blue-4 {
+			background-color: $blue-4;
+		}
+
+		h2 {
+			font-family: $Helvetica_LC;
+			font-size: 28px;
+			line-height: 32px;
+			margin-bottom: 20px;
+		}
+
+		h3 {
+			font-family: $Helvetica_BC;
+			font-size: 16px;
+			line-height: 20px;
+		}
+		
+		p {
+			font-family: $Helvetica_LC;
+			font-size: 16px;
+			line-height: 20px;
+		}
+
+		ul {
+			list-style: disc;
+			padding-left: 20px;
+			
+			li {
+				font-family: $Helvetica_LC;
+				font-size: 16px;
+				line-height: 20px;
+			}	
+		
+		}
+	}
+}
+.control {
+	@include size(100%, auto);
+	margin: 0 auto;
+	overflow: hidden;
+}

@@ -5,8 +5,14 @@
 	cursor: pointer;
 	
 	&.logo_isisa {
-		background: url(../images/logo_isisa.svg) center center no-repeat;
+		background: url(../images/logos/logo_isisa.svg) center center no-repeat;
 		background-size: cover;
 		@include size(161px, 41px);
+	}
+
+	&.isologo_isisa {
+		background: url(../images/logos/isologo_isisa.svg) center center no-repeat;
+		background-size: cover;
+		@include size(180px, 180px);
 	}
 }

@@ -12,14 +12,37 @@
 @import 'variables';
 @import 'mixins';
 @import 'logos';
+@import 'fonts';
+@import 'buttons';
 
 // theme
 body {
   background: $black;
-  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-family: $Helvetica_MC, Helvetica, Arial, sans-serif;
   color: $white;
   position: relative;
+  overflow: hidden;
 }
+// loader
+#preloader {
+  background: $black;
+  position: fixed;
+  left: 0;
+  right:0;
+  top: 0;
+  bottom: 0;
+  z-index: 20;
+  text-align: center;
+}
+// loader element
+.ball-clip-rotate-multiple {
+  display: inline-block;
+  margin-top: 30%;
+}
+.ball-clip-rotate-multiple > div {
+  border-color: $blue-1;
+}
+
 // header
 header {
   background: $gray-2;
@@ -30,7 +53,9 @@ header {
   right: 0;
   top: 0;
   z-index: 5;
+  box-shadow: 0 0 6px rgba(0,0,0,.5);
 }
+
 // contenidos
 article {
   @include size(100%, auto);
@@ -69,6 +94,7 @@ section {
     @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
   }
 }
+
 // blue overlay
 .overlay {
   @include size(100%, 100%);
@@ -81,6 +107,31 @@ section {
   left: 0;
   right: 0;
   bottom: 0;
+  text-align: center;
+
+  .isologo_isisa {
+    margin: 4% auto 30px;
+  }
+
+  h1 {
+    font-size: 75px;
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+
+    em {
+      font-family: $Helvetica_MI;
+    }
+
+    span {
+      font-family: $Helvetica_LC;
+      display: block;
+      font-size: 65px;
+    }
+  }
+
+  .btn_plus {
+    margin: 30px auto 0;
+  }
+
 }
 #content_video {
   @include size(100%, 100%);
@@ -96,3 +147,5 @@ iframe {
   height: auto;
 }
 
+// Componentes
+@import 'accordeon';

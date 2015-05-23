@@ -8,7 +8,15 @@ function calcutaleHeight(element) {
 	$(element).height(finalHeight);
 }
 
+// Loader
+function loader() {
+	'use strict';
+	$("#preloader").delay(900).fadeOut("slow");
+	$("body").delay(900).css({overflow:"visible"})
+}
+
 $(window).load(function() {
+	loader();
 	calcutaleHeight('section');
 });
 

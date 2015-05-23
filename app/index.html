@@ -9,6 +9,8 @@
 
     <!-- build:css styles/vendor.css -->
     <!-- bower:css -->
+    <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
+    <link rel="stylesheet" href="../bower_components/loaders.css/loaders.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -17,13 +19,17 @@
     <!-- endbuild -->
 
     <!-- build:js scripts/vendor/modernizr.js -->
-    <script src="/bower_components/modernizr/modernizr.js"></script>
+    <script src="../bower_components/modernizr/modernizr.js"></script>
     <!-- endbuild -->
   </head>
   <body>
     <!--[if lt IE 10]>
       <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
+
+    <div id="preloader">
+      <div class="loader-inner ball-clip-rotate-multiple"></div>
+    </div>
 
     <header>
       <a class="logo logo_isisa" title="ISISA">ISISA</a>
@@ -35,56 +41,58 @@
 
         <div id="content_video">
           <iframe src="https://player.vimeo.com/video/127196955?autoplay=1&loop=1&title=0&byline=0&portrait=0" width="500" height="281" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-        </div>
+        </div><!-- content_video -->
 
         <div class="overlay">
-          <h1>Soluciones <em>innovadoras</em> <span>en compuestos de caucho</span></h1>
-        </div>
+          <span class="logo isologo_isisa animated fadeInDownBig"></span>
+          <h1 class="animated fadeInUpBig">Soluciones <em>innovadoras</em> <span>en compuestos de caucho</span></h1>
 
-        <div class="accordeon_content" style="display: none">
+          <a href="#mas_info_isisa" class="btn btn_plus" title="ver más">+</a>
+
+          <a href="#mezclas" class="btn btn_mouse" title="scroll">scroll</a>
+        </div><!-- overlay -->
+      </section>
+
+      <div class="accordeon_content" id="mas_info_isisa">
+        <div class="control">
           
-          <div class="control">
-            
-            <div class="col_25">
-              <h2>NOSOTROS</h2> 
-              <p>Desde 1960 nos hemos dedicado a apoyar y fomentar el crecimiento de diferentes sectores de la industria (caucho, calzado, plástico y gráfica) mediante la importación y distribución de materias primas. Acompañando nuestra visión familiar, y sumada ya al negocio la tercera generación, surge en 2004 la idea de un proyecto industrial que a mediados de 2006 se materializa con el nacimiento de ISISA, consolidándose en el mercado como uno de los principales y más modernos elaboradores de compuestos de caucho para la industria.</p>
-            </div>
-
-            <div class="col_25">
-              <h2>QUE HACEMOS</h2>
-              <p>Somos una empresa dedicada al desarrollo, elaboración y comercialización de compuestos de caucho para la industria. Bajo un riguroso sistema de control de calidad y con tecnología de última generación aplicada a nuestros procesos, brindamos un servicio de excelencia, fomentando siempre el vínculo entre clientes y proveedores, adaptándonos a las necesidades cambiantes del mercado.</p>
-            </div>
-
-            <div class="col_25">
-              <h2>PRINCIPALES ACTIVOS ESTRATÉGICOS</h2>
-              <ul>
-                <li>Inversión e Innovación  en Tecnología aplicada a procesos.</li>
-                <li>Profundo conocimiento del Mercado.</li>
-                <li>Política de Calidad y Mejora Continua.</li>
-                <li>Abastecimiento de Materias Primas con proveedores de primer nivel.</li>
-                <li>Elevado grado de Profesionalización y Compromiso de nuestro staff.</li> 
-              </ul>
-            </div>
-
-            <div class="col_25">
-              <h2>VISION Y MISION</h2>
-              <h3>Visión</h3>
-              <p>Ser una empresa líder en el desarrollo, elaboración y comercialización de compuestos y productos de caucho para la industria local e internacional.</p>
-
-              <h3>Misión</h3>
-              <p>Consolidar y expandir el negocio de la elaboración y comercialización de compuestos y productos de caucho mediante la plena satisfacción de las necesidades de nuestro cliente, incentivando la inversión tecnológica y fomentando el compromiso, profesionalización y espíritu de equipo de nuestros colaboradores.</p>
-            </div>
-
+          <div class="col_25 blue-2">
+            <h2>NOSOTROS</h2> 
+            <p>Desde 1960 nos hemos dedicado a apoyar y fomentar el crecimiento de diferentes sectores de la industria (caucho, calzado, plástico y gráfica) mediante la importación y distribución de materias primas. Acompañando nuestra visión familiar, y sumada ya al negocio la tercera generación, surge en 2004 la idea de un proyecto industrial que a mediados de 2006 se materializa con el nacimiento de ISISA, consolidándose en el mercado como uno de los principales y más modernos elaboradores de compuestos de caucho para la industria.</p>
           </div>
 
-        </div>  
+          <div class="col_25 blue-3">
+            <h2>QUE HACEMOS</h2>
+            <p>Somos una empresa dedicada al desarrollo, elaboración y comercialización de compuestos de caucho para la industria. Bajo un riguroso sistema de control de calidad y con tecnología de última generación aplicada a nuestros procesos, brindamos un servicio de excelencia, fomentando siempre el vínculo entre clientes y proveedores, adaptándonos a las necesidades cambiantes del mercado.</p>
+          </div>
 
-      </section>
+          <div class="col_25 blue-4">
+            <h2>PRINCIPALES ACTIVOS ESTRATÉGICOS</h2>
+            <ul>
+              <li>Inversión e Innovación  en Tecnología aplicada a procesos.</li>
+              <li>Profundo conocimiento del Mercado.</li>
+              <li>Política de Calidad y Mejora Continua.</li>
+              <li>Abastecimiento de Materias Primas con proveedores de primer nivel.</li>
+              <li>Elevado grado de Profesionalización y Compromiso de nuestro staff.</li> 
+            </ul>
+          </div>
+
+          <div class="col_25 blue-1">
+            <h2>VISION Y MISION</h2>
+            <h3>Visión</h3>
+            <p>Ser una empresa líder en el desarrollo, elaboración y comercialización de compuestos y productos de caucho para la industria local e internacional.</p>
+
+            <h3>Misión</h3>
+            <p>Consolidar y expandir el negocio de la elaboración y comercialización de compuestos y productos de caucho mediante la plena satisfacción de las necesidades de nuestro cliente, incentivando la inversión tecnológica y fomentando el compromiso, profesionalización y espíritu de equipo de nuestros colaboradores.</p>
+          </div>
+
+        </div><!-- control -->
+      </div><!-- accordeon_content -->
 
       <section id="mezclas">
         <h1>NUESTRAS <em>MEZCLAS</em></h1>
 
-        <div class="accordeon_content">
+        <div class="accordeon_content" style="display: none">
           
           <div class="control">
             
@@ -172,6 +180,7 @@
     <!-- bower:js -->
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/fitvids/jquery.fitvids.js"></script>
+    <script src="../bower_components/loaders.css/loaders.css.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

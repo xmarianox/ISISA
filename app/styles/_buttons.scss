@@ -1,0 +1,25 @@
+//_buttons.scss
+.btn {
+	display: inline-block;
+	text-decoration: none;
+	border: none;
+	background-color: transparent;
+	color: $white;
+	font-family: $Helvetica_ULC;
+	overflow: hidden;
+
+	&.btn_plus {
+		background-color: $blue-5;
+		@include size(55px, 55px);
+		@include border-radius(50%);
+		font-size: 40px;
+		line-height: 55px;
+	}
+
+	&.btn_mouse {
+		background: url(../images/btn_mouse.png) 0 0 no-repeat;
+		@include size(29px, 72px);
+		text-indent: -9999px;
+	}
+
+}
