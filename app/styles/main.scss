@@ -26,11 +26,7 @@ body {
 // loader
 #preloader {
   background: $black;
-  position: fixed;
-  left: 0;
-  right:0;
-  top: 0;
-  bottom: 0;
+  @include position(fixed, 0,0,0,0);
   z-index: 20;
   text-align: center;
 }
@@ -48,12 +44,9 @@ header {
   background: $gray-2;
   @include size(100%, 64px);
   padding: 12px 16px;
-  position: fixed;
-  left: 0;
-  right: 0;
-  top: 0;
+  @include position(fixed, 0,0,0, auto);
   z-index: 5;
-  box-shadow: 0 0 6px rgba(0,0,0,.5);
+  @include box-shadow(0 0 6px, $black-50);
 }
 
 // contenidos
@@ -94,19 +87,15 @@ section {
     @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
   }
 }
-
+// Home / Intro
 // blue overlay
 .overlay {
   @include size(100%, 100%);
   background: $blue-overlay;
-  position: absolute;
+  @include position(absolute, 0,0,0,0);
   color: $white;
   z-index: 2;
   overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   text-align: center;
 
   .isologo_isisa {
@@ -114,8 +103,8 @@ section {
   }
 
   h1 {
-    font-size: 75px;
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+    font-size: $title-size;
+    @include text-shadow(1px 1px 1px, $black-50);
 
     em {
       font-family: $Helvetica_MI;
@@ -124,23 +113,25 @@ section {
     span {
       font-family: $Helvetica_LC;
       display: block;
-      font-size: 65px;
+      font-size: $sub-title-size;
     }
   }
 
   .btn_plus {
-    margin: 30px auto 0;
+    margin: 30px auto;
+  }
+
+  .btn_mouse {
+    display: block;
+    margin: 0 auto;
   }
 
 }
 #content_video {
   @include size(100%, 100%);
   position: absolute;
+  @include position(absolute, 0, 0, 0, 0);
   overflow: hidden;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
 }
 iframe {
   max-width: 100%;
@@ -149,3 +140,26 @@ iframe {
 
 // Componentes
 @import 'accordeon';
+
+// Nuestras Mezclas
+#mezclas {
+  position: relative;
+
+  h1 {
+    font-family: $Helvetica_ULC;
+    font-size: $title-size;
+    @include text-shadow(1px 1px 1px, $black-50);
+    text-align: center;
+    margin-top: 10%; 
+    em {
+      font-family: $Helvetica_LC;
+    }
+  }
+
+  .btn_plus {
+    @include position(absolute, auto, 0, 5%, 0);
+    display: block;
+    margin: 0 auto;
+  }
+}
+

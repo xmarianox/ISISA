@@ -28,4 +28,26 @@ $(document).ready(function() {
 	});
 	// videos 
 	$('#content_video').fitVids();
+
+	$('a[href*=#]:not([href=#])').click(function() {
+	    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+	      var target = $(this.hash);
+	      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+	      if (target.length) {
+	        $('html,body').animate({
+	          scrollTop: target.offset().top
+	        }, 1000);
+	        return false;
+	      }
+	    }
+	  });
+
+	// mas info.
+	$('.btn_plus').click(function(event) {
+		event.preventDefault();
+		var _target = $(this).attr('href');
+		console.log(_target);
+		$(_target).toggleClass('visible animated slideInUp');
+	});
+
 });

@@ -2,6 +2,7 @@
 
 // colores
 $black  : #000000;
+$black-50: rgba(0,0,0,.5);
 $white	: #FFFFFF;
 
 $gray-1 : #e1e1e1;
@@ -31,3 +32,13 @@ $Helvetica_LC  : 'HelveticaNeue-LightCond';
 $Helvetica_ULC : 'HelveticaNeue-UltraLigCond';
 // Helvetica Neue Bold Condensed
 $Helvetica_BC  : 'HelveticaNeue-BoldCond';
+
+// Fonts Size
+$title-size: 75px;
+$sub-title-size: 65px;
+
+$accordeon-title: 28px;
+$accordeon-title-line-height: 32px;
+$accordeon-sub-title: 16px;
+$accordeon-text: 16px;
+$accordeon-text-line-height: 20px;

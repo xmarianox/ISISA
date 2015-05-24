@@ -3,6 +3,11 @@
 	@include size(100%, auto);
 	overflow: hidden;
 	margin: 0 auto;
+	display: none;
+	
+	&.visible {
+		display: block;
+	}
 
 	.control {
 		display: table;
@@ -28,21 +33,21 @@
 
 		h2 {
 			font-family: $Helvetica_LC;
-			font-size: 28px;
-			line-height: 32px;
+			font-size: $accordeon-title;
+			line-height: $accordeon-title-line-height;
 			margin-bottom: 20px;
 		}
 
 		h3 {
 			font-family: $Helvetica_BC;
-			font-size: 16px;
-			line-height: 20px;
+			font-size: $accordeon-sub-title;
+			line-height: $accordeon-text-line-height;
 		}
 		
 		p {
 			font-family: $Helvetica_LC;
-			font-size: 16px;
-			line-height: 20px;
+			font-size: $accordeon-text;
+			line-height: $accordeon-text-line-height;
 		}
 
 		ul {
@@ -51,10 +56,62 @@
 			
 			li {
 				font-family: $Helvetica_LC;
-				font-size: 16px;
-				line-height: 20px;
+				font-size: $accordeon-text;
+				line-height: $accordeon-text-line-height;
 			}	
 		
+		}
+	}
+
+	.col_50 {
+		@include size(50%, 100%);
+		display: table-cell;
+		
+		&.gray-6 {
+			background-color: $gray-6;
+		}
+
+		&.gray-5 {
+			background-color: $gray-5;
+		}
+
+		.content {
+			padding: 30px 15px;
+			overflow: hidden;
+		}
+
+		img {
+			max-width: 100%;
+			display: block;
+			height: auto;
+		}
+
+		h2 {
+			font-family: $Helvetica_LC;
+			font-size: $accordeon-title;
+			line-height: $accordeon-title-line-height;
+			margin-bottom: 20px;
+		}
+		
+		p {
+			font-family: $Helvetica_LC;
+			font-size: $accordeon-text;
+			line-height: $accordeon-text-line-height;
+			float: left;
+			width: 50%;
+		}
+
+		ul {
+			list-style: disc;
+			padding-left: 20px;
+			float: left;
+			width: 50%;
+
+			li {
+				font-family: $Helvetica_LC;
+				font-size: $accordeon-text;
+				line-height: $accordeon-text-line-height;
+			}
 		}
 	}
 }

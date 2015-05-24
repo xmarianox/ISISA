@@ -7,6 +7,7 @@
 	color: $white;
 	font-family: $Helvetica_ULC;
 	overflow: hidden;
+	text-align: center;
 
 	&.btn_plus {
 		background-color: $blue-5;
@@ -14,6 +15,10 @@
 		@include border-radius(50%);
 		font-size: 40px;
 		line-height: 55px;
+
+		&.gray-5 {
+			background-color: $gray-5;
+		}
 	}
 
 	&.btn_mouse {
