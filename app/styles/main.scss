@@ -15,6 +15,9 @@
 @import 'fonts';
 @import 'buttons';
 
+// Aload Snippet
+[data-aload] { background-image: none !important; }
+
 // theme
 body {
   background: $black;
@@ -129,7 +132,6 @@ section {
 }
 #content_video {
   @include size(100%, 100%);
-  position: absolute;
   @include position(absolute, 0, 0, 0, 0);
   overflow: hidden;
 }
@@ -163,3 +165,94 @@ iframe {
   }
 }
 
+// Mercados
+#mercados {
+  position: relative;
+
+  h1 {
+    font-family: $Helvetica_ULC;
+    font-size: $title-size;
+    @include text-shadow(1px 1px 1px, $black-50);
+    text-align: center;
+    margin-top: 20%; 
+    em {
+      font-family: $Helvetica_LC;
+      display: block;
+    }
+  }
+
+  .btn_plus {
+    @include position(absolute, auto, 0, 5%, 0);
+    display: block;
+    margin: 0 auto;
+  }
+
+  .label_span {
+    font-family: $Helvetica_LC;
+    background-color: $green-1;
+    @include size(330px, auto);
+    text-align: center;
+    margin: 5% auto;
+    padding: 10px;
+    border: 1px solid $green-2;
+
+    p {
+      font-size: 19px;
+      line-height: 19px;
+    }
+  }
+}
+
+// Laboratorio
+#laboratorio {
+  position: relative;
+
+  h1 {
+    font-family: $Helvetica_LC;
+    @include text-shadow(1px 1px 1px, $white-50);
+    color: $blue-1;
+    text-align: center;
+    margin-top: 25%;
+    
+    em {
+      display: inline-block;
+      font-size: $title-size;
+      line-height: $title-size;
+    }
+    span {
+      display: inline-block;
+      font-size: 32px;
+      line-height: 32px;
+      text-align: left;
+    }
+  }
+
+  .btn_plus {
+    @include position(absolute, auto, 0, 5%, 0);
+    display: block;
+    margin: 0 auto;
+  }
+}
+
+
+// Nuestras Mezclas
+#instalaciones {
+  position: relative;
+
+  h1 {
+    font-family: $Helvetica_ULC;
+    font-size: $title-size;
+    @include text-shadow(1px 1px 1px, $black-50);
+    text-align: center;
+    margin-top: 25%;
+    em {
+      font-family: $Helvetica_LC;
+    }
+  }
+
+  .btn_plus {
+    @include position(absolute, auto, 0, 5%, 0);
+    display: block;
+    margin: 0 auto;
+  }
+}

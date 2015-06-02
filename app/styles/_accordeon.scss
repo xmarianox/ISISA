@@ -9,8 +9,62 @@
 		display: block;
 	}
 
+	// Textos
+	h2 {
+		font-family: $Helvetica_LC;
+		font-size: $accordeon-title;
+		line-height: $accordeon-title-line-height;
+		margin-bottom: 20px;
+	}
+
+	h3 {
+		font-family: $Helvetica_BC;
+		font-size: $accordeon-sub-title;
+		line-height: $accordeon-text-line-height;
+	}
+	
+	p {
+		font-family: $Helvetica_LC;
+		font-size: $accordeon-text;
+		line-height: $accordeon-text-line-height;
+		margin-bottom: 20px;
+	}
+
+	ul {
+		list-style: disc;
+		padding-left: 20px;
+		
+		li {
+			font-family: $Helvetica_LC;
+			font-size: $accordeon-text;
+			line-height: $accordeon-text-line-height;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		display: block;
+		height: auto;
+	}
+
 	.control {
 		display: table;
+
+		&.green-1 {
+			background-color: $green-1;
+		}
+	}
+
+	.col_16 {
+		@include size(16.666%, 100%);
+		display: table-cell;
+		padding: 30px 15px;
+		overflow: hidden;
+	}
+	
+	.col_20 {
+		@include size(20%, 100%);
+		display: table-cell;
 	}
 
 	.col_25 {
@@ -29,37 +83,19 @@
 		}
 		&.blue-4 {
 			background-color: $blue-4;
+		}		
+	}
+
+	.col_40 {
+		@include size(40%, 100%);
+		display: table-cell;
+
+		&.gray-6 {
+			background-color: $gray-6;
 		}
 
-		h2 {
-			font-family: $Helvetica_LC;
-			font-size: $accordeon-title;
-			line-height: $accordeon-title-line-height;
-			margin-bottom: 20px;
-		}
-
-		h3 {
-			font-family: $Helvetica_BC;
-			font-size: $accordeon-sub-title;
-			line-height: $accordeon-text-line-height;
-		}
-		
-		p {
-			font-family: $Helvetica_LC;
-			font-size: $accordeon-text;
-			line-height: $accordeon-text-line-height;
-		}
-
-		ul {
-			list-style: disc;
-			padding-left: 20px;
-			
-			li {
-				font-family: $Helvetica_LC;
-				font-size: $accordeon-text;
-				line-height: $accordeon-text-line-height;
-			}	
-		
+		&.gray-5 {
+			background-color: $gray-5;
 		}
 	}
 
@@ -75,48 +111,115 @@
 			background-color: $gray-5;
 		}
 
-		.content {
-			padding: 30px 15px;
-			overflow: hidden;
-		}
-
-		img {
-			max-width: 100%;
-			display: block;
-			height: auto;
-		}
-
-		h2 {
-			font-family: $Helvetica_LC;
-			font-size: $accordeon-title;
-			line-height: $accordeon-title-line-height;
-			margin-bottom: 20px;
-		}
-		
 		p {
-			font-family: $Helvetica_LC;
-			font-size: $accordeon-text;
-			line-height: $accordeon-text-line-height;
 			float: left;
 			width: 50%;
 		}
 
 		ul {
-			list-style: disc;
-			padding-left: 20px;
 			float: left;
 			width: 50%;
+		}
+	}
+	
+	.col_80 {
+		@include size(80%, 100%);
+		display: table-cell;
+	}
 
-			li {
-				font-family: $Helvetica_LC;
-				font-size: $accordeon-text;
-				line-height: $accordeon-text-line-height;
+	&#mas_info_instalaciones {
+		.col_50 { 
+			p, ul {
+				float: none;
+				width: 100%;
+				margin-bottom: 20px;
 			}
 		}
 	}
+
 }
 .control {
 	@include size(100%, auto);
 	margin: 0 auto;
 	overflow: hidden;
+}
+// content generico
+.content {
+	padding: 30px 15px;
+	overflow: hidden;
+}
+// mercados boxs
+figure {
+	@include size(100%, 100%);
+	position: relative;
+	overflow: hidden;
+	float: left;
+	
+	&._50 {
+		height: 50%;
+
+		&:first-child {
+			margin-bottom: 5px;
+		}
+		&:last-child {
+			margin-top: 5px;
+		}
+	}
+
+	img {
+		max-width: 100%;
+		height: auto;
+	}
+	
+	&:hover {
+		> figcaption {
+			display: block;
+		}
+	}
+
+	> figcaption {
+		display: none;
+		@include position(absolute, 0, 0, 0, 0);
+		z-index: 2;
+		overflow: hidden;
+	}
+}
+
+.blue_overlay {
+	@include size(100%, 100%);
+	max-height: 316px;
+	background: url(../images/laboratorio/laboratorio-calidad.jpg) center center no-repeat;
+
+	h2 {
+		font-family: $Helvetica_ULC;
+		font-size: 65px;
+		text-align: center;
+	}
+
+	p {
+		font-family: $Helvetica_LC;
+		font-size: 22px;
+	}
+}
+
+.box {
+	@include position(absolute, 0, 0, 0, 0);
+	@include size(100%, 100%);
+	margin: 0;
+	overflow: hidden;
+	padding: 10px 20px;
+	text-align: center;
+
+	h2 {
+		font-family: $Helvetica_MC;
+		font-size: 20px;
+		line-height: 22px;
+		margin-bottom: 3px;
+	}
+
+	p {
+		font-family: $Helvetica_LC;
+		font-size: 16px;
+		line-height: 18px;
+	}
 }

@@ -17,6 +17,7 @@ function loader() {
 
 $(window).load(function() {
 	loader();
+	aload();
 	calcutaleHeight('section');
 });
 
