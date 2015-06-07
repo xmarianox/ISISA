@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <title>ISISA</title>
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
@@ -397,11 +397,10 @@
       </section>
       
       <div id="partners">
-        
         <div class="title-separator">
           <h3>PARTNERS</h3>
           <hr>
-        </div>
+        </div><!-- title-separator -->
 
         <ul class="partners-list">
           <li><img src="images/partners/partner-1.png" alt="Dow"></li>
@@ -411,12 +410,21 @@
           <li><img src="images/partners/partner-5.png" alt="YPF"></li>
           <li><img src="images/partners/partner-6.png" alt="Maprim"></li>
           <li><img src="images/partners/partner-7.png" alt="Rhodia"></li>
-        </ul>
-
-      </div>
+        </ul><!-- partners-list -->
+      </div><!-- partners -->
       
-      <section data-aload id="contacto">
-        contacto
+      <section id="contacto">
+        <div data-aload class="header_contact">
+          <h3>Contacto</h3>
+        </div>
+
+        <div class="contact_map">
+          <div id="map-canvas"></div>
+        </div>
+
+        <div class="contact_form_content">
+          lallala
+        </div>
       </section>
     
     </article>
@@ -434,6 +442,9 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
+    
+    <!-- Google Maps -->
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->

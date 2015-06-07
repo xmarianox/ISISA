@@ -83,7 +83,7 @@ section {
   }
 
   &#contacto {
-    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+    background-color: $black;
   }
 }
 // Home / Intro
@@ -364,8 +364,43 @@ iframe {
       max-width: 100%;
       height: auto;
       display: block;
+      margin: 0 auto;
     }
 
   }
 }
 
+// Contacto
+#contacto {
+  
+  .header_contact {
+    @include size(100%, 20%);
+    background: url(../images/contacto/contacto.jpg) 0 0 no-repeat;
+    background-size: cover;
+    position: relative;
+
+    h3 {
+      font-family: $Helvetica_ULC;
+      font-size: $title-size;
+      @include text-shadow(1px 1px 1px, $black-50);
+      @include position(absolute, auto, 5%, 5%, auto);
+    }
+  }
+  .contact_map {
+    @include size(100%, 30%);
+    overflow: hidden;
+    position: relative;
+  }
+  .contact_form_content {
+    @include size(100%, 50%);
+    background: url(../images/contacto/form-bck.jpg) 0 0 no-repeat;
+    background-size: cover;
+  }
+
+  #map-canvas {
+    @include size(100%, 100%);
+    padding: 0;
+    margin: 0;
+  }
+
+}
