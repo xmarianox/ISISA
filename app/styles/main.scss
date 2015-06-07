@@ -30,7 +30,7 @@ body {
 #preloader {
   background: $black;
   @include position(fixed, 0,0,0,0);
-  z-index: 20;
+  z-index: 99999;
   text-align: center;
 }
 // loader element
@@ -48,7 +48,7 @@ header {
   @include size(100%, 64px);
   padding: 12px 16px;
   @include position(fixed, 0,0,0, auto);
-  z-index: 5;
+  z-index: 300;
   @include box-shadow(0 0 6px, $black-50);
 }
 
@@ -80,10 +80,6 @@ section {
 
   &#logistica {
     background-color: $black;
-  }
-
-  &#partners {
-    background-color: $gray-1;
   }
 
   &#contacto {
@@ -287,6 +283,12 @@ iframe {
       } 
     }
 
+    .bx-controls-direction {
+      a {
+        z-index: 200;
+      }
+    }
+
     img {
       height: auto;
     }
@@ -314,7 +316,56 @@ iframe {
       }
     }
   }
-
 }
 
+// Partners
+#partners {
+  @include size(100%, auto);
+  overflow: hidden;
+  position: relative;
+  background-color: $gray-1;
+  padding: 30px;
+
+  .title-separator {
+    @include size(100%, auto);
+    overflow: hidden;
+    text-align: center;
+    position: relative;
+    margin-bottom: 20px;
+    
+    h3 {
+      font-family: $Helvetica_LC;
+      font-size: 35px;
+      line-height: 35px;
+      color: $gray-7;
+      display: inline-block;
+      background-color: $gray-1;
+      padding: 0 30px;
+    }
+
+    hr {
+      width: 100%;
+      border: 0;
+      border-top: 1px solid $gray-7;
+      margin: -20px auto 20px auto;
+    }
+  }
+
+  .partners-list {
+    @include size(100%, auto);
+    overflow: hidden;
+    display: table;
+
+    li {
+      display: table-cell;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+
+  }
+}
 
