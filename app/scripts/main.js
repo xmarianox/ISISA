@@ -18,7 +18,7 @@ function loader() {
 $(window).load(function() {
 	loader();
 	aload();
-	calcutaleHeight('section');
+	calcutaleHeight('section', '.bx-viewport');
 });
 
 $(document).ready(function() {
@@ -49,6 +49,11 @@ $(document).ready(function() {
 		var _target = $(this).attr('href');
 		console.log(_target);
 		$(_target).toggleClass('visible animated slideInUp');
+	});
+
+	$('.bxslider').bxSlider({
+		mode  : 'horizontal',
+		pager : true
 	});
 
 });

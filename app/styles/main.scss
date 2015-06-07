@@ -79,11 +79,11 @@ section {
   }
 
   &#logistica {
-    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+    background-color: $black;
   }
 
   &#partners {
-    @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%); 
+    background-color: $gray-1;
   }
 
   &#contacto {
@@ -174,7 +174,7 @@ iframe {
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
-    margin-top: 20%; 
+    margin-top: 16%; 
     em {
       font-family: $Helvetica_LC;
       display: block;
@@ -212,7 +212,7 @@ iframe {
     @include text-shadow(1px 1px 1px, $white-50);
     color: $blue-1;
     text-align: center;
-    margin-top: 25%;
+    margin-top: 5%;
     
     em {
       display: inline-block;
@@ -234,7 +234,6 @@ iframe {
   }
 }
 
-
 // Nuestras Mezclas
 #instalaciones {
   position: relative;
@@ -244,7 +243,7 @@ iframe {
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
-    margin-top: 25%;
+    margin-top: 20%;
     em {
       font-family: $Helvetica_LC;
     }
@@ -256,3 +255,66 @@ iframe {
     margin: 0 auto;
   }
 }
+
+// Logistica
+#logistica {
+  
+  .bx-wrapper {
+    border: none !important;
+    box-shadow: none !important;
+    background: $black;
+    margin: 0 auto;
+    
+    .bx-pager {
+      padding-top: 0;
+      bottom: 30px;
+    }
+
+    .bx-pager {
+      &.bx-default-pager {
+        a {
+          background: transparent;
+          border: 2px solid $white;
+          @include size(15px, 15px);
+          @include border-radius(50%);
+
+          &.active, 
+          &:focus, 
+          &:hover {
+            background: $blue-5;
+          }
+        }
+      } 
+    }
+
+    img {
+      height: auto;
+    }
+
+    .custom_caption {
+      @include position(absolute, auto, 5%, 10%, auto);
+      z-index: 10;
+      @include size(100%, auto);
+      max-width: 400px;
+
+      // Textos
+      h3 {
+        font-family: $Helvetica_LC;
+        @include text-shadow(1px 1px 1px, $black-50);
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 10px;
+      }
+      
+      p {
+        font-family: $Helvetica_LC;
+        @include text-shadow(1px 1px 1px, $black-50);
+        font-size: $accordeon-text;
+        line-height: $accordeon-text-line-height;
+      }
+    }
+  }
+
+}
+
+
