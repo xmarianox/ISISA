@@ -94,4 +94,9 @@ $(document).ready(function() {
 		pager : true
 	});
 
+	// map overlay
+	$('.map_overlay').click(function() {
+		$(this).addClass('hide');
+	});
+
 });

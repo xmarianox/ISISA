@@ -30,4 +30,19 @@
 		text-indent: -9999px;
 	}
 
+	&.btn_primary {
+		background-color: $blue-1;
+		color: $white;
+		@include size(162px, 47px);
+		font-family: $Helvetica_BC;
+		font-size: 24px;
+		line-height: 47px;
+		text-transform: uppercase;
+
+		&:hover,
+		&:focus {
+			background-color: $blue-5;
+		} 
+	}
+
 }
