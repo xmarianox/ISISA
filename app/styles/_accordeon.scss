@@ -11,20 +11,20 @@
 
 	// Textos
 	h2 {
-		font-family: $Helvetica_LC;
+		font-family: $Helvetica_L;
 		font-size: $accordeon-title;
 		line-height: $accordeon-title-line-height;
 		margin-bottom: 20px;
 	}
 
 	h3 {
-		font-family: $Helvetica_BC;
+		font-family: $Helvetica_B;
 		font-size: $accordeon-sub-title;
 		line-height: $accordeon-text-line-height;
 	}
 	
 	p {
-		font-family: $Helvetica_LC;
+		font-family: $Helvetica_L;
 		font-size: $accordeon-text;
 		line-height: $accordeon-text-line-height;
 		margin-bottom: 20px;
@@ -35,7 +35,7 @@
 		padding-left: 20px;
 		
 		li {
-			font-family: $Helvetica_LC;
+			font-family: $Helvetica_L;
 			font-size: $accordeon-text;
 			line-height: $accordeon-text-line-height;
 		}
@@ -209,7 +209,7 @@ figure {
 	}
 
 	h2 {
-		font-family: $Helvetica_ULC;
+		font-family: $Helvetica_T;
 		font-size: 65px;
 		line-height: 65px;
 		text-align: center;
@@ -217,7 +217,7 @@ figure {
 	}
 
 	p {
-		font-family: $Helvetica_LC;
+		font-family: $Helvetica_L;
 		font-size: 22px;
 		line-height: 28px;
 		margin: 0;
@@ -234,14 +234,14 @@ figure {
 	text-align: center;
 
 	h2 {
-		font-family: $Helvetica_MC;
+		font-family: $Helvetica_B;
 		font-size: 20px;
 		line-height: 22px;
 		margin-bottom: 3px;
 	}
 
 	p {
-		font-family: $Helvetica_LC;
+		font-family: $Helvetica_L;
 		font-size: 16px;
 		line-height: 18px;
 	}

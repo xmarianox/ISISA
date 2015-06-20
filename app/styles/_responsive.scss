@@ -1,0 +1,32 @@
+//_responsive.scss
+@media(max-width: 1024px) {
+  section {
+    &#mezclas,
+    &#mercados,
+    &#laboratorio,
+    &#instalaciones {
+      background-position: center center;
+      background-attachment: initial;
+      background-size: cover;
+    }
+  }
+  
+  .contact_form_content {
+    p {
+      em {
+        a {
+          text-decoration: none;
+          color: $white;
+        }
+      }
+    } 
+  }
+
+  .form-control {
+    textarea {
+      @include size(100%, 90px);
+    }
+  }
+    
+
+}

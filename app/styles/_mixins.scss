@@ -37,3 +37,19 @@
 	bottom: $bottom;
 	right: $right;
 }
+
+// transform
+@mixin transform-rotate($angle) {
+  -webkit-transform: rotate($angle);
+  -moz-transform: rotate($angle);
+  -o-transform: rotate($angle);
+  transform: rotate($angle);
+}
+
+// transition
+@mixin transition($time, $type) {
+  -webkit-transition: $time $type;
+  -moz-transition: $time $type;
+  -o-transition: $time $type;
+  transition: $time $type;
+}

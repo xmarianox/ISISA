@@ -15,4 +15,10 @@
 		background-size: cover;
 		@include size(180px, 180px);
 	}
+
+	&.logo_isisa_inverse {
+		background: url(../images/logos/logo_isisa_footer.svg) center center no-repeat;
+		background-size: cover;
+		@include size(110px, 29px);
+	}
 }

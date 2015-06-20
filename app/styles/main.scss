@@ -21,7 +21,7 @@
 // theme
 body {
   background: $black;
-  font-family: $Helvetica_MC, Helvetica, Arial, sans-serif;
+  font-family: $Helvetica_L, Helvetica, Arial, sans-serif;
   color: $white;
   position: relative;
   overflow: hidden;
@@ -50,6 +50,48 @@ header {
   @include position(fixed, 0,0,0, auto);
   z-index: 300;
   @include box-shadow(0 0 6px, $black-50);
+
+  .logo {
+    float:left;
+  }
+
+  #nav-icon {
+    float:right;
+  }
+
+}
+// menu
+.menu {
+  @include position(absolute, 64px,auto, auto, 0);
+  @include size(100%, auto);
+  max-width: 300px;
+  background-color: $blue-1;
+  padding: 0px 16px;
+  z-index: 299;
+  display: none;
+
+  &.open {
+    display: block;
+  }
+
+  li {
+    @include size(100%, auto);
+    border-bottom: 1px solid $white;
+    display: block;
+    
+    &:last-child {
+      border-bottom: none;
+    }
+
+    a {
+      color: $white;
+      text-decoration: none;
+      font-size: 21px;
+      line-height: 45px;
+      display: block;
+      text-align: center;
+    }
+  }
 }
 
 // contenidos
@@ -110,7 +152,7 @@ section {
     }
 
     span {
-      font-family: $Helvetica_LC;
+      font-family: $Helvetica_L;
       display: block;
       font-size: $sub-title-size;
     }
@@ -144,13 +186,13 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_ULC;
+    font-family: $Helvetica_L;
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
     margin-top: 10%; 
     em {
-      font-family: $Helvetica_LC;
+      font-family: $Helvetica_L;
     }
   }
 
@@ -166,13 +208,13 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_ULC;
+    font-family: $Helvetica_L;
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
     margin-top: 16%; 
     em {
-      font-family: $Helvetica_LC;
+      font-family: $Helvetica_L;
       display: block;
     }
   }
@@ -184,7 +226,7 @@ iframe {
   }
 
   .label_span {
-    font-family: $Helvetica_LC;
+    font-family: $Helvetica_L;
     background-color: $green-1;
     @include size(330px, auto);
     text-align: center;
@@ -193,7 +235,7 @@ iframe {
     border: 1px solid $green-2;
 
     p {
-      font-size: 19px;
+      font-size: 16px;
       line-height: 19px;
     }
   }
@@ -204,8 +246,8 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_LC;
-    @include text-shadow(1px 1px 1px, $white-50);
+    font-family: $Helvetica_L;
+    @include text-shadow(1px 1px 1px, $black-50);
     color: $blue-1;
     text-align: center;
     margin-top: 5%;
@@ -235,13 +277,13 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_ULC;
+    font-family: $Helvetica_L;
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
     margin-top: 20%;
     em {
-      font-family: $Helvetica_LC;
+      font-family: $Helvetica_L;
     }
   }
 
@@ -301,7 +343,7 @@ iframe {
 
       // Textos
       h3 {
-        font-family: $Helvetica_LC;
+        font-family: $Helvetica_L;
         @include text-shadow(1px 1px 1px, $black-50);
         font-size: 40px;
         line-height: 40px;
@@ -309,7 +351,7 @@ iframe {
       }
       
       p {
-        font-family: $Helvetica_LC;
+        font-family: $Helvetica_L;
         @include text-shadow(1px 1px 1px, $black-50);
         font-size: $accordeon-text;
         line-height: $accordeon-text-line-height;
@@ -341,7 +383,7 @@ iframe {
     margin-bottom: 20px;
     
     h3 {
-      font-family: $Helvetica_LC;
+      font-family: $Helvetica_L;
       font-size: 35px;
       line-height: 35px;
       color: $gray-7;
@@ -381,13 +423,13 @@ iframe {
 #contacto {
   
   .header_contact {
-    @include size(100%, 20%);
+    @include size(100%, 15%);
     background: url(../images/contacto/contacto.jpg) 0 0 no-repeat;
     background-size: cover;
     position: relative;
 
     h3 {
-      font-family: $Helvetica_ULC;
+      font-family: $Helvetica_L;
       font-size: $title-size;
       @include text-shadow(1px 1px 1px, $black-50);
       @include position(absolute, auto, 5%, 5%, auto);
@@ -410,7 +452,7 @@ iframe {
     }
   }
   .contact_form_content {
-    @include size(100%, 50%);
+    @include size(100%, 55%);
     background: url(../images/contacto/form-bck.jpg) 0 0 no-repeat;
     background-size: cover;
   }
@@ -438,27 +480,27 @@ iframe {
   }
 
   h3, p {
-    font-family: $Helvetica_BC;
+    font-family: $Helvetica_B;
     font-size: 24px;
     line-height: 34px;
   }
 
   p {
     em {
-      font-size: 36px;
-      line-height: 56px;
+      font-size: 31px;
+      line-height: 41px;
     }
   }
 
   h4 {
-    font-family: $Helvetica_MC;
+    font-family: $Helvetica_T;
     font-size: 18px;
     line-height: 22px;
     text-transform: uppercase;
   }
 
   span {
-    font-family: $Helvetica_MC;
+    font-family: $Helvetica_T;
     font-size: 18px;
     line-height: 22px;
   }
@@ -484,6 +526,7 @@ iframe {
   }
 }
 
-
+// Responsive
+@import 'responsive';
 
 

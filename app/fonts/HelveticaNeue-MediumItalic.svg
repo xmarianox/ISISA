@@ -2,8 +2,8 @@
 <!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
 <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1">
 <metadata>
-Created by FontForge 20141024 at Thu May 21 05:34:50 2015
- By System Administrator
+Created by FontForge 20150504 at Sat Jun 20 19:38:39 2015
+ By Jimmy Wärting
 Copyright (c) 1988, 1990, 1993 Adobe Systems Incorporated.  All Rights Reserved.Helvetica is a trademark of Linotype-Hell AG and/or its subsidiaries.
 </metadata>
 <defs>
@@ -21,7 +21,7 @@ Copyright (c) 1988, 1990, 1993 Adobe Systems Incorporated.  All Rights Reserved.
     cap-height="714"
     bbox="-165 -218 1125 947"
     underline-thickness="50"
-    underline-position="-50"
+    underline-position="-100"
     slope="-12"
     stemh="90"
     stemv="114"

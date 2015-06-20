@@ -5,7 +5,7 @@
 	border: none;
 	background-color: transparent;
 	color: $white;
-	font-family: $Helvetica_ULC;
+	font-family: $Helvetica_T;
 	overflow: hidden;
 	text-align: center;
 
@@ -34,7 +34,7 @@
 		background-color: $blue-1;
 		color: $white;
 		@include size(162px, 47px);
-		font-family: $Helvetica_BC;
+		font-family: $Helvetica_B;
 		font-size: 24px;
 		line-height: 47px;
 		text-transform: uppercase;
@@ -44,5 +44,63 @@
 			background-color: $blue-5;
 		} 
 	}
+}
 
+// Nav icon component
+#nav-icon {
+  @include size(50px, 30px);
+  position: relative;
+  margin: 5px auto;
+  // transform
+  @include transform-rotate(0deg);
+  // transition
+  @include transition(.5s, ease-in-out);
+  cursor: pointer;
+
+  span {
+    @include size(100%, 6px);
+    display: block;
+    position: absolute;
+    background: $blue-1;
+    //border-radius: 9px;
+    opacity: 1;
+    left: 0;
+    // transform
+    @include transform-rotate(0deg);
+    // transition
+    @include transition(.25s, ease-in-out);
+    
+    &:nth-child(1) {
+      top: 0px;
+    }
+    &:nth-child(2), &:nth-child(3) {
+      top: 12px;
+    }
+    &:nth-child(4) {
+      top: 24px;
+    }
+
+  }
+	// open state
+  &.open {
+    span {
+      &:nth-child(1) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+      &:nth-child(2) {
+        @include transform-rotate(45deg);
+  
+      }
+      &:nth-child(3) {
+        @include transform-rotate(-45deg);
+      }
+      &:nth-child(4) {
+        top: 18px;
+        width: 0%;
+        left: 50%;
+      }
+    }
+  }
 }
