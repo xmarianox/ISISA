@@ -70,7 +70,7 @@
 	.col_25 {
 		@include size(25%, 100%);
 		display: table-cell;
-		padding: 30px 15px;
+		padding: 30px 15px 30px 30px;
 		
 		&.blue-1 {
 			background-color: $blue-1;
@@ -159,7 +159,7 @@
 }
 // content generico
 .content {
-	padding: 30px 15px;
+	padding: 30px 15px 30px 30px;
 	overflow: hidden;
 }
 // mercados boxs
@@ -173,16 +173,15 @@ figure {
 		height: 50%;
 
 		&:first-child {
-			margin-bottom: 5px;
+			margin-bottom: 8px;
 		}
 		&:last-child {
-			margin-top: 5px;
+			margin-top: 9px;
 		}
 	}
 
 	img {
-		max-width: 100%;
-		height: auto;
+		@include size(100%, auto);
 	}
 	
 	&:hover {
@@ -230,19 +229,19 @@ figure {
 	@include size(100%, 100%);
 	margin: 0;
 	overflow: hidden;
-	padding: 10px 20px;
+	padding: 10px;
 	text-align: center;
 
 	h2 {
 		font-family: $Helvetica_B;
-		font-size: 20px;
-		line-height: 22px;
+		font-size: 18px;
+		line-height: 20px;
 		margin-bottom: 3px;
 	}
 
 	p {
 		font-family: $Helvetica_L;
-		font-size: 16px;
-		line-height: 18px;
+		font-size: 14px;
+		line-height: 16px;
 	}
 }

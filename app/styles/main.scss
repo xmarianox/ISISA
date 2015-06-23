@@ -44,7 +44,7 @@ body {
 
 // header
 header {
-  background: $gray-2;
+  background: $gray-2-90;
   @include size(100%, 64px);
   padding: 12px 16px;
   @include position(fixed, 0,0,0, auto);
@@ -127,6 +127,14 @@ section {
   &#contacto {
     background-color: $black;
   }
+  
+  // btn_plus
+  .btn_plus {
+    @include position(absolute, auto, 0, 15%, 0);
+    display: block;
+    margin: 0 auto;
+  }
+
 }
 // Home / Intro
 // blue overlay
@@ -159,12 +167,14 @@ section {
   }
 
   .btn_plus {
-    margin: 30px auto;
+    @include position(absolute, auto, 0, 25%, 0);
+    margin: 0 auto;
   }
 
   .btn_mouse {
-    display: block;
+    @include position(absolute, auto, 0, 10%, 0);
     margin: 0 auto;
+    display: block;
   }
 
 }
@@ -195,12 +205,6 @@ iframe {
       font-family: $Helvetica_L;
     }
   }
-
-  .btn_plus {
-    @include position(absolute, auto, 0, 5%, 0);
-    display: block;
-    margin: 0 auto;
-  }
 }
 
 // Mercados
@@ -217,12 +221,6 @@ iframe {
       font-family: $Helvetica_L;
       display: block;
     }
-  }
-
-  .btn_plus {
-    @include position(absolute, auto, 0, 5%, 0);
-    display: block;
-    margin: 0 auto;
   }
 
   .label_span {
@@ -247,7 +245,7 @@ iframe {
 
   h1 {
     font-family: $Helvetica_L;
-    @include text-shadow(1px 1px 1px, $black-50);
+    @include text-shadow(1px 1px 1px, $white-50);
     color: $blue-1;
     text-align: center;
     margin-top: 5%;
@@ -263,12 +261,6 @@ iframe {
       line-height: 32px;
       text-align: left;
     }
-  }
-
-  .btn_plus {
-    @include position(absolute, auto, 0, 5%, 0);
-    display: block;
-    margin: 0 auto;
   }
 }
 
@@ -461,8 +453,26 @@ iframe {
     @include size(100%, 100%);
     padding: 0;
     margin: 0;
-  }
 
+    #contentInfoWindow {
+      color: $black;
+
+      h1 {
+        font-family: $Helvetica_B;
+        font-size: 14px;
+        line-height: 16px;
+        em {
+          color: $blue-1;
+        }
+      }
+      
+      p {
+        font-size: 12px;
+        line-height: 14px;
+      }
+
+    }
+  }
 }
 // Form
 .contact_form_content {

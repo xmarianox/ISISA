@@ -18,36 +18,44 @@ function loader() {
 // Google maps api.
 function initialize() {
 	'use strict';
-
-	var myLatlng = new google.maps.LatLng(-34.554056, -58.527123);
+	// set options.
 	var mapOptions = {
-	zoom: 4,
-	center: myLatlng
+		zoom: 17,
+		center: new google.maps.LatLng(-34.5539039, -58.5273)
 	};
-
+	// set map.
 	var map = new google.maps.Map(document.getElementById('map-canvas'), mapOptions);
-
-	var contentString = '<div id="content">'+
-	  '<div id="siteNotice">'+
-	  '</div>'+
-	  '<h1 id="firstHeading" class="firstHeading">Uluru</h1>'+
-	  '</div>'+
-	  '</div>';
-
-	var infowindow = new google.maps.InfoWindow({
-	  content: contentString
-	});
-
+	// set marker.
 	var marker = new google.maps.Marker({
-	  position: myLatlng,
-	  map: map,
-	  title: 'ISISA Insumos y Servicios Industriales'
+		position: map.getCenter(),
+		map: map,
+		title: 'ISISA Insumos y Servicios Industriales'
 	});
-	google.maps.event.addListener(marker, 'click', function() {
-	infowindow.open(map,marker);
-	});
+	// set content data.
+
+	var contentString = '<div id="contentInfoWindow">'+
+				'<h1><em>ISI</em>SA Insumos y Servicios Industriales S.A.</h1>'+
+	      '<div id="bodyContent">'+
+		      '<p>La Nueva (Calle 70) 1348/54</p>'+
+		      '<p>Villa Zagala, San Martín.</p>'+
+		      '<p>Provincia de Buenos Aires, Argentina.</p>'+
+		      '<p>011 4753-5757</p>'+
+	      '</div>'+
+      '</div>';
+  // set infowindow
+  var infowindow = new google.maps.InfoWindow({
+  	content: contentString
+  });
+  // add event listener
+  google.maps.event.addListener(marker, 'click', function() {
+  	infowindow.open(map, marker);
+  });
 }
 
+// Initialize google Maps
+google.maps.event.addDomListener(window, 'load', initialize);
+
+// 
 $(window).load(function() {
 	'use strict';
 	loader();
@@ -55,11 +63,9 @@ $(window).load(function() {
 	calcutaleHeight('section', '.bx-viewport');
 });
 
+// 
 $(document).ready(function() {
 	'use strict';
-
-	// Google Maps Api.
-	initialize();
 
 	// resize
 	$(window).resize(function() {
