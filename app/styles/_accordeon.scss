@@ -245,3 +245,18 @@ figure {
 		line-height: 16px;
 	}
 }
+
+.download {
+	@include size(100%, auto);
+	overflow: hidden;
+
+	img {
+		display: inline-block;
+		margin: 0 15px;
+	}
+
+	.btn {
+		display: inline-block;
+		vertical-align: bottom;
+	}
+}

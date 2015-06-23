@@ -44,6 +44,13 @@
 			background-color: $blue-5;
 		} 
 	}
+
+  &.btn_descargar {
+    background: url(../images/laboratorio/btn-descargar-cert.png) 0 0 no-repeat;
+    @include size(111px, 103px);
+    text-indent: -9999px;
+  }
+
 }
 
 // Nav icon component
