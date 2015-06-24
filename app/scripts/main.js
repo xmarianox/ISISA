@@ -99,6 +99,12 @@ $(document).ready(function() {
 		var _target = $(this).attr('href');
 		console.log(_target);
 		$(_target).toggleClass('visible animated slideInUp');
+    if($(_target).hasClass('visible')){
+      $('html, body').animate({'scrollTop': $(_target).prev().offset().top + $(_target).outerHeight()}, 400);
+    }
+    // else{
+    //   $('html, body').animate({'scrollTop': $(_target).prev().offset().top }, 400);      
+    // }
 	});
 
 	$('.bxslider').bxSlider({
