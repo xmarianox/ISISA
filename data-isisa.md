@@ -1,28 +1,23 @@
 # Control de cambios ISISA.
----
 
 ## Abiertos.
----
 
 * HelveticaNeueLt.ttf TEXTOS
 * HelveticaNeueBd.ttf FRASE TITULOS y TITULOS MERCADOS ABASTECIDOS
 * HelveticaNeue-Thin.otf TITULOS DE LOS CONTENIDOS DE LAS SECCIONES
 * HelveticaNeue-MediumItalic.otf VARIABLE PARA TITULOS
 
+* Acordate del auto-scroll para ver la info que abris con los "+"
+** Pendiente
+
+* Falta el PDF para descargar, ya lo estoy pidiendo.
+** Pendiente
+
+## Cerrados
+
 * Hagamos q la info que se abre con el + se abra dentro del alto de cada caratula alineado abajo.
 Es decir, que no se abra para abajo sino ahi mismo en el area de la imagen.
 ** El problema es que cuando hacemos el responsive al intentar ajustar todo el contenido no tiene para donde crecer de la manera que esta ahora cuando se achique la pantalla el contenido va a crecer para abajo. Se te ocurre otra manera de hacerlo?
-
-2. Acordate del auto-scroll para ver la info que abris con los "+"
-
-* Al video saquémosle los iconos de share y like de arriba a la derecha.
-** El problema es que eso lo trae el iframe de vimeo, yo saque todo lo que podia desde la web de vimeo, tengo que ver si hay alguna manera de sacarlo.
-
-6. Acordate de agregarle el boton de descarga de PDF.
-
-
-## Cerrados
----
 
 * Falta el menu hamburguesa con las secciones.
 ** Listo.
@@ -45,6 +40,9 @@ Es decir, que no se abra para abajo sino ahi mismo en el area de la imagen.
 * A la info de mercados (las que abren sobre la imagen) achicale un par de puntos así entran bien. Fíjate que a las imágenes les falta el stroke de la derecha y de abajo.
 ** Listo.
 
+* Al video saquémosle los iconos de share y like de arriba a la derecha.
+** El problema es que eso lo trae el iframe de vimeo, yo saque todo lo que podia desde la web de vimeo, tengo que ver si hay alguna manera de sacarlo.
+
 * A las columnas de texto dejales un margen un poco mas grande a la izquierda, entre 5 y 10 px mas estamos bien, si queres cuando lo ajustas lo veo con vos.
 ** Listo.
 
@@ -52,4 +50,18 @@ Es decir, que no se abra para abajo sino ahi mismo en el area de la imagen.
 ** Listo.
 
 * Mapa, veo los elementos de google map pero no veo el mapa.
-** Listo
+** Listo.
+
+* Acordate de agregarle el boton de descarga de PDF.
+** Listo.
+
+* En mezclas fijate que los listados quedaron muy pegados al texto de la izquierda, dales un poco mas de margen.
+** Listo.
+
+* A los listados de MERCADOS dales un enter despues de la coma asi quedan como en el boceto, un item arriba del otro.
+** Listo.
+
+* En logistica creo que se rompio el slider porque no veo la segunda imagen. Fijate de subir un cachito el texto que quedo muy pegado abajo.
+** Listo.
+
+

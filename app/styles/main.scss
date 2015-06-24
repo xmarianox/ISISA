@@ -328,7 +328,7 @@ iframe {
     }
 
     .custom_caption {
-      @include position(absolute, auto, 5%, 10%, auto);
+      @include position(absolute, auto, 5%, 15%, auto);
       z-index: 10;
       @include size(100%, auto);
       max-width: 400px;

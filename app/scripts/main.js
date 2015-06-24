@@ -60,7 +60,7 @@ $(window).load(function() {
 	'use strict';
 	loader();
 	aload();
-	calcutaleHeight('section', '.bx-viewport');
+	calcutaleHeight('.full-height');
 });
 
 // 
@@ -69,7 +69,7 @@ $(document).ready(function() {
 
 	// resize
 	$(window).resize(function() {
-		calcutaleHeight('section', '.bx-viewport');
+    calcutaleHeight('.full-height');
 	});
 	// videos 
 	$('#content_video').fitVids();

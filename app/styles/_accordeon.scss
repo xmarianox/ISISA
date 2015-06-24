@@ -132,6 +132,7 @@
 		ul {
 			float: left;
 			width: 50%;
+			padding-left: 40px;
 		}
 	}
 	
@@ -239,10 +240,15 @@ figure {
 		margin-bottom: 3px;
 	}
 
-	p {
-		font-family: $Helvetica_L;
-		font-size: 14px;
-		line-height: 16px;
+	ul {
+		padding-left: 0;
+		list-style: none;
+
+		li {
+			font-family: $Helvetica_L;
+			font-size: 15px;
+			line-height: 18px;
+		}
 	}
 }
 
