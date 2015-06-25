@@ -7,17 +7,18 @@
 * HelveticaNeue-Thin.otf TITULOS DE LOS CONTENIDOS DE LAS SECCIONES
 * HelveticaNeue-MediumItalic.otf VARIABLE PARA TITULOS
 
-* Acordate del auto-scroll para ver la info que abris con los "+"
-** Pendiente
-
 * Falta el PDF para descargar, ya lo estoy pidiendo.
 ** Pendiente
 
 ## Cerrados
 
+* Acordate del auto-scroll para ver la info que abris con los "+"
+** Listo
+
 * Hagamos q la info que se abre con el + se abra dentro del alto de cada caratula alineado abajo.
 Es decir, que no se abra para abajo sino ahi mismo en el area de la imagen.
 ** El problema es que cuando hacemos el responsive al intentar ajustar todo el contenido no tiene para donde crecer de la manera que esta ahora cuando se achique la pantalla el contenido va a crecer para abajo. Se te ocurre otra manera de hacerlo?
+** Listo
 
 * Falta el menu hamburguesa con las secciones.
 ** Listo.
