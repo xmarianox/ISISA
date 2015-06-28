@@ -50,13 +50,18 @@ header {
   @include position(fixed, 0,0,0, auto);
   z-index: 300;
   @include box-shadow(0 0 6px, $black-50);
-
+  
   .logo {
     float:left;
   }
 
   #nav-icon {
     float:right;
+  }
+
+  @media(max-width: $sreen_md) {
+    @include size(100%, 54px);
+    padding: 10px 16px;
   }
 
 }
@@ -92,36 +97,72 @@ header {
       text-align: center;
     }
   }
+  // desktop
+  @media(max-width: $sreen_md) {
+    top: 54px;
+  }
 }
 
 // contenidos
 article {
   @include size(100%, auto);
   margin-top: 64px;
+
+  @media(max-width: $sreen_md) {
+    margin-top: 54px;
+  }
+  
 }
 section {
   @include size(100%, auto);
   overflow: hidden;
   position: relative;
-
+  
   &#mezclas {
     @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%);
     background-size: cover;
   }
-
   &#mercados {
     @include background-fixed('../images/mercados/bg-mercados.jpg', 50%, 50%);
     background-size: cover;
   }
-
   &#laboratorio {
     @include background-fixed('../images/laboratorio/bg-laboratorio.jpg', 50%, 50%);
     background-size: cover;
   }
-
   &#instalaciones {
     @include background-fixed('../images/instalaciones/bg-instalaciones.jpg', 50%, 50%);
     background-size: cover;
+  }
+
+  @media(max-width: $sreen_tablet_land) {
+    
+    &#mezclas, &#mercados, &#laboratorio, &#instalaciones {
+      background-position: center center;
+      background-attachment: initial;
+    }
+  
+  }
+  
+  @media(max-width: $sreen_tablet_port) {
+    
+    &#mezclas {
+      background: url(../images/mezclas/bg-mezclas-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#mercados {
+      background: url(../images/mercados/bg-mercados-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#laboratorio {
+      background: url(../images/laboratorio/bg-laboratorio-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#instalaciones {
+      background: url(../images/instalaciones/bg-instalaciones-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+  
   }
 
   &#logistica {
@@ -137,6 +178,17 @@ section {
     @include position(absolute, auto, 0, 15%, 0);
     display: block;
     margin: 0 auto;
+  }
+
+  h1 {
+    font-family: $Helvetica_L;
+    font-size: $title-size;
+    @include text-shadow(1px 1px 1px, $black-50);
+    text-align: center;
+    //margin-top: 10%; 
+    em {
+      font-family: $Helvetica_L;
+    }
   }
 
 }
@@ -200,14 +252,7 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_L;
-    font-size: $title-size;
-    @include text-shadow(1px 1px 1px, $black-50);
-    text-align: center;
     margin-top: 10%; 
-    em {
-      font-family: $Helvetica_L;
-    }
   }
 }
 
@@ -216,13 +261,8 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_L;
-    font-size: $title-size;
-    @include text-shadow(1px 1px 1px, $black-50);
-    text-align: center;
     margin-top: 16%; 
     em {
-      font-family: $Helvetica_L;
       display: block;
     }
   }
@@ -248,10 +288,7 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_L;
-    @include text-shadow(1px 1px 1px, $white-50);
     color: $blue-1;
-    text-align: center;
     margin-top: 5%;
     
     em {
@@ -273,14 +310,7 @@ iframe {
   position: relative;
 
   h1 {
-    font-family: $Helvetica_L;
-    font-size: $title-size;
-    @include text-shadow(1px 1px 1px, $black-50);
-    text-align: center;
     margin-top: 20%;
-    em {
-      font-family: $Helvetica_L;
-    }
   }
 
   .btn_plus {
@@ -556,6 +586,5 @@ footer {
 }
 
 // Responsive
-@import 'responsive';
-
+//@import 'responsive';
 

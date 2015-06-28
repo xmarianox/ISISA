@@ -152,6 +152,33 @@
 		}
 	}
 
+	// mobile
+	@media(max-width: $sreen_tablet_port) {
+		.control {
+			display: block;
+		}
+		.col_16 {
+			@include size(50%, auto);
+			padding: 15px;
+			display: block;
+			float: left;
+		}
+		.col_20,
+		.col_25,
+		.col_33,
+		.col_50,
+		.col_80 {
+			@include size(100%, auto);
+			display: block;
+			float: left;
+		}
+		.col_20 {
+			padding-top: 15px;
+		}
+		.col_80 {
+			padding: 20px;
+		}
+	}
 }
 .control {
 	@include size(100%, auto);
@@ -162,6 +189,10 @@
 .content {
 	padding: 30px 15px 30px 30px;
 	overflow: hidden;
+
+	@media(max-width: $sreen_tablet_port) {
+		padding: 30px 20px;
+	}
 }
 // mercados boxs
 figure {
@@ -169,7 +200,8 @@ figure {
 	position: relative;
 	overflow: hidden;
 	float: left;
-	
+	border: 1px solid $white;
+
 	&._50 {
 		height: 50%;
 
@@ -179,6 +211,15 @@ figure {
 		&:last-child {
 			margin-top: 9px;
 		}
+
+		@media(max-width: $sreen_md) {
+	  	&:first-child {
+				margin-bottom: 3px;
+			}
+			&:last-child {
+				margin-top: 7px;
+			}
+		} 
 	}
 
 	img {
@@ -223,6 +264,24 @@ figure {
 		margin: 0;
 		float: left;
 	}
+	// mobile
+	@media(max-width: $sreen_tablet_port) {
+		@include size(100%, auto);
+		max-height: 100%;
+		background: url(../images/laboratorio/laboratorio-calidad-mobile.jpg) center center no-repeat;
+		background-size: cover;
+
+		h2 {
+			font-family: $Helvetica_L;
+			font-size: $accordeon-title;
+			line-height: $accordeon-title-line-height;
+		}
+
+		p {
+			font-size: $accordeon-text;
+			line-height: $accordeon-text-line-height;
+		}
+	}	
 }
 
 .box {
@@ -250,6 +309,19 @@ figure {
 			line-height: 18px;
 		}
 	}
+
+	@media(max-width: $sreen_md) {
+		h2 {
+			font-size: 16px;
+			line-height: 18px;
+		}
+		ul {
+			li {
+				font-size: 13px;
+				line-height: 16px;
+			}
+		}		
+	}
 }
 
 .download {
@@ -264,5 +336,21 @@ figure {
 	.btn {
 		display: inline-block;
 		vertical-align: bottom;
+	}
+
+	@media(max-width: $sreen_md) {
+		img {
+			@include size(90px, auto);
+			vertical-align: top;
+		}
+	}
+	@media(max-width: $sreen_tablet_port) {
+		img {
+			@include size(80px, auto);
+			margin: 0 7px;
+		}
+		.btn {
+			vertical-align: top;
+		}
 	}
 }

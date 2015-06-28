@@ -1,5 +1,13 @@
 // variables.scss
 
+// screen size
+$sreen_md: 1366px;
+// tablet
+$sreen_tablet_land: 1024px;
+$sreen_tablet_port: 768px;
+//
+$sreen_mobile_xl: 600px;
+
 // colores
 $black  : #000000;
 $black-50: rgba(0,0,0,.5);
@@ -44,3 +52,17 @@ $accordeon-title-line-height: 32px;
 $accordeon-sub-title: 16px;
 $accordeon-text: 16px;
 $accordeon-text-line-height: 20px;
+
+@media(max-width: $sreen_md) {
+  $title-size: 75px;
+  $sub-title-size: 65px;
+  //
+  $accordeon-title: 24px;
+  $accordeon-title-line-height: 28px;
+}    
+
+@media(max-width: $sreen_tablet_port) {
+  $title-size: 55px;
+  $sub-title-size: 45px;
+  //
+}

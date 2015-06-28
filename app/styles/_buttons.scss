@@ -51,6 +51,13 @@
     text-indent: -9999px;
   }
 
+  @media(max-width: $sreen_tablet_port) {
+    &.btn_descargar {
+      @include size(80px, 73px);
+      background-size: cover;
+    } 
+  }
+
 }
 
 // Nav icon component
@@ -86,7 +93,6 @@
     &:nth-child(4) {
       top: 24px;
     }
-
   }
 	// open state
   &.open {
@@ -110,4 +116,11 @@
       }
     }
   }
+  
+  // latop
+  @media(max-width: $sreen_md) {
+    @include size(45px, 30px);
+    margin: 2px auto;
+  }
+
 }
