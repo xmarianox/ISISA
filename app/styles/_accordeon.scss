@@ -219,7 +219,25 @@ figure {
 			&:last-child {
 				margin-top: 7px;
 			}
-		} 
+		}
+
+		@media(max-width: $sreen_tablet_port) {
+			&:first-child {
+				margin-bottom: 10px;
+			}
+			&:last-child {
+				margin-top: 10px;
+			}
+		}
+
+		@media(max-width: $sreen_mobile_xl) {
+	  	&:first-child {
+				margin-bottom: 3px;
+			}
+			&:last-child {
+				margin-top: 7px;
+			}
+		}
 	}
 
 	img {

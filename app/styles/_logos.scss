@@ -18,6 +18,10 @@
 		background: url(../images/logos/isologo_isisa.svg) center center no-repeat;
 		background-size: cover;
 		@include size(180px, 180px);
+
+		@media(max-width: $sreen_mobile_xl) {
+			@include size(120px, 120px);
+		}
 	}
 
 	&.logo_isisa_inverse {
