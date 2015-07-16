@@ -1,5 +1,5 @@
 {
-  "name": "isisa",
+  "name": "isisa-com",
   "private": true,
   "dependencies": {
     "jquery": "~2.1.1",
@@ -9,5 +9,9 @@
     "loaders.css": "~0.1.1",
     "aload": "~1.2.1",
     "dw-bxslider-4": "~4.2.4"
+  },
+  "devDependencies": {
+    "chai": "~3.0.0",
+    "mocha": "~2.2.5"
   }
 }
