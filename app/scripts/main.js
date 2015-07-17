@@ -80,8 +80,24 @@ $(document).ready(function() {
 			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
 		}
 	});
+	// mercados 
+	$('.label_span').click(function(event) {
+		event.preventDefault();
+		var target = $(this).attr('data-ref');
+		//console.log(target);
+		$(target).toggleClass('visible animated slideInUp');
+		if($(target).hasClass('visible')){
+			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
+		}
+	});
+	// hover de las columnas
+	$('.col_25').hover(function(event) {
+		event.preventDefault();
+		$('.col_25').removeClass('active');
+		$(this).addClass('active');
+	});
 	// bxslider config
-	$('.bxslider').bxSlider({ mode: 'horizontal', pager: true });
+	$('.bxslider').bxSlider({ mode: 'horizontal', pager: true, auto: true });
 	// map overlay
 	$('.map_overlay').click(function() {
 		$(this).addClass('hide');
