@@ -1,14 +1,4 @@
 // variables.scss
-
-// screen size
-$sreen_md: 1366px;
-// tablet
-$sreen_tablet_land: 1024px;
-$sreen_tablet_port: 768px;
-//
-$sreen_mobile_xl: 600px;
-$sreen_mobile_xs: 414px;
-
 // colores
 $black    : #000000;
 $black-50 : rgba(0,0,0,.5);
@@ -18,7 +8,7 @@ $white-50 : rgba(255,255,255,.5);
 $gray-1    : #e1e1e1;
 $gray-2	   : #b4b8ba; //header
 $gray-3	   : #dedede; //inputs
-$gray-4	   : #9f9f9f; 
+$gray-4	   : #9f9f9f;
 $gray-5    : #383838; //button +
 $gray-6    : #272727;
 $gray-7    : #cccccc;
@@ -53,28 +43,3 @@ $accordeon-title-line-height: 32px;
 $accordeon-sub-title: 16px;
 $accordeon-text: 16px;
 $accordeon-text-line-height: 20px;
-
-// Mobile vars
-@media(max-width: $sreen_md) {
-  $title-size: 75px;
-  $sub-title-size: 65px;
-  //
-  $accordeon-title: 24px;
-  $accordeon-title-line-height: 28px;
-} 
-
-@media(max-width: $sreen_tablet_port) {
-  $title-size: 55px;
-  $sub-title-size: 45px;
-  //
-}
-
-@media(max-width: $sreen_mobile_xl) {
-  $title-size: 45px;
-  $sub-title-size: 35px;
-}
-
-@media(max-width: $sreen_mobile_xs) {
-  $title-size: 35px;
-  $sub-title-size: 25px;
-}

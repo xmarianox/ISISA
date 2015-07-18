@@ -11,7 +11,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="../bower_components/animate.css/animate.min.css">
     <link rel="stylesheet" href="../bower_components/loaders.css/loaders.css">
-    <link rel="stylesheet" href="../bower_components/dw-bxslider-4/dist/jquery.bxslider.min.css">
+    <link rel="stylesheet" href="../bower_components/dw-bxslider-4/src/css/jquery.bxslider.css">
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -34,14 +34,12 @@
 
     <header>
       <a class="logo logo_isisa" title="ISISA">ISISA</a>
-    
       <div id="nav-icon">
         <span></span>
         <span></span>
         <span></span>
         <span></span>
       </div>
-      
       <ul class="menu">
         <li><a href="#nosotros" title="NOSOTROS">NOSOTROS</a></li>
         <li><a href="#mezclas" title="NUESTRAS MEZCLAS">NUESTRAS MEZCLAS</a></li>
@@ -55,7 +53,6 @@
     </header>
 
     <article>
-      
       <section data-aload id="nosotros" class="full-height">
 
         <div id="content_video">
@@ -65,22 +62,22 @@
         <div class="overlay">
           <div class="relative_continer">
             <span class="logo isologo_isisa animated fadeInDownBig"></span>
-            
+
             <h1 class="animated fadeInUpBig">Soluciones <em>innovadoras</em> <span>en compuestos de caucho</span></h1>
 
             <a href="#mas_info_isisa" class="btn btn_plus" title="ver más">+</a>
 
             <a href="#mezclas" class="btn btn_mouse" title="scroll">scroll</a>
-        
+
           </div>
         </div><!-- overlay -->
       </section>
 
       <div class="accordeon_content" id="mas_info_isisa">
         <div class="control">
-          
+
           <div class="col_25 blue-2 active">
-            <h2>NOSOTROS</h2> 
+            <h2>NOSOTROS</h2>
             <p>Desde 1960 nos hemos dedicado a apoyar y fomentar el crecimiento de diferentes sectores de la industria (caucho, calzado, plástico y gráfica) mediante la importación y distribución de materias primas. Acompañando nuestra visión familiar, y sumada ya al negocio la tercera generación, surge en 2004 la idea de un proyecto industrial que a mediados de 2006 se materializa con el nacimiento de ISISA, consolidándose en el mercado como uno de los principales y más modernos elaboradores de compuestos de caucho para la industria.</p>
           </div>
 
@@ -117,14 +114,19 @@
         <a href="#mas_info_mezcla" class="btn btn_plus gray-5" title="ver más">+</a>
       </section>
 
-      <div class="accordeon_content" id="mas_info_mezcla"> 
+      <div class="accordeon_content" id="mas_info_mezcla">
         <div class="control">
-          
+
           <div class="col_50 gray-6">
-            <img data-aload="images/mezclas/mezclas1.jpg" alt="MEZCLAS">
+            <figure class="content-header">
+              <img data-aload="images/mezclas/mezclas1.jpg" alt="MEZCLAS">
+              <figcaption>
+                <h2>MEZCLAS</h2>
+              </figcaption>
+            </figure>
 
             <div class="content">
-              <h2>MEZCLAS</h2>
+              <!-- <h2>MEZCLAS</h2> -->
 
               <p>En nuestras instalaciones elaboramos master bacthes a partir de una extensa familia de cauchos, tanto naturales como sintéticos, siendo los principales:</p>
 
@@ -145,10 +147,14 @@
           </div><!-- .col_50 -->
 
           <div class="col_50 gray-5">
-            <img data-aload="images/mezclas/mezclas2.jpg" alt="PRESENTACIÓN">
+             <figure class="content-header">
+              <img data-aload="images/mezclas/mezclas2.jpg" alt="PRESENTACIÓN">
+              <figcaption>
+                <h2>PRESENTACIÓN</h2>
+              </figcaption>
+            </figure>
             <div class="content">
-              <h2>PRESENTACIÓN</h2>
-
+              <!-- <h2>PRESENTACIÓN</h2> -->
               <p>Ofrecemos al mercado una gran flexibilidad respecto a la presentación de nuestros productos de acuerdo a las siguientes alternativas:</p>
 
               <ul>
@@ -175,11 +181,11 @@
         <a href="#mas_info_mercados" class="btn btn_plus green-1" title="ver más">+</a>
       </section>
 
-      <div class="accordeon_content" id="mas_info_mercados"> 
+      <div class="accordeon_content" id="mas_info_mercados">
         <div class="control green-1">
-          
+
           <div class="col_16">
-            <figure>
+            <figure class="content-figure">
               <img data-aload="images/mercados/mercados-1-auto.jpg" alt="AUTOMOTRIZ">
 
               <figcaption>
@@ -188,20 +194,20 @@
                 <div class="box">
                   <h2>AUTOMOTRIZ</h2>
                   <ul>
-                    <li>Amortiguadores,</li> 
+                    <li>Amortiguadores,</li>
                     <li>Antivibrantes, Correas,</li>
-                    <li>Fuelles, Retenes, O-Rings,</li> 
+                    <li>Fuelles, Retenes, O-Rings,</li>
                     <li>Diafragmas, Mangueras,</li>
-                    <li>Bujes, Perfiles,</li> 
+                    <li>Bujes, Perfiles,</li>
                     <li>Neumáticos</li>
                   </ul>
                 </div>
               </figcaption>
             </figure>
           </div><!-- col-16 -->
-          
+
           <div class="col_16">
-            <figure class="_50">
+            <figure class="content-figure _50">
               <img data-aload="images/mercados/mercados-2-calzado.jpg" alt="CALZADO">
 
               <figcaption>
@@ -217,7 +223,7 @@
               </figcaption>
             </figure>
 
-            <figure class="_50">
+            <figure class="content-figure _50">
               <img data-aload="images/mercados/mercados-3-petroleo.jpg" alt="PETRÓLEO">
 
               <figcaption>
@@ -232,9 +238,9 @@
               </figcaption>
             </figure>
           </div><!-- col_16 -->
-          
+
           <div class="col_16">
-            <figure>
+            <figure class="content-figure">
               <img data-aload="images/mercados/mercados-4-agro.jpg" alt="AGROINDUSTRIA">
 
               <figcaption>
@@ -242,7 +248,7 @@
 
                 <div class="box">
                   <h2>AGROINDUSTRIA</h2>
-                
+
                   <ul>
                     <li>Amortiguadores</li>
                     <li>Correas</li>
@@ -253,9 +259,9 @@
               </figcaption>
             </figure>
           </div><!-- col_16 -->
-          
+
           <div class="col_16">
-            <figure class="_50">
+            <figure class="content-figure _50">
               <img data-aload="images/mercados/mercados-5-mineria.jpg" alt="MINERÍA">
 
               <figcaption>
@@ -263,7 +269,7 @@
 
                 <div class="box">
                   <h2>MINERÍA</h2>
-                 
+
                   <ul>
                     <li>Cintas Transportadoras,</li>
                     <li>Molinos engomados,</li>
@@ -272,16 +278,15 @@
                 </div>
               </figcaption>
             </figure>
-            
-            <figure class="_50">
+
+            <figure class="content-figure _50">
               <img data-aload="images/mercados/mercados-6-linea.jpg" alt="LÍNEA BLANCA">
 
               <figcaption>
                 <img data-aload="images/mercados/mercados-6-linea-b.jpg" alt="LÍNEA BLANCA">
-  
+
                 <div class="box">
                   <H2>LÍNEA BLANCA</H2>
-                  
                   <ul>
                     <li>Burletería, Fuelles,</li>
                     <li>Antivibrantes</li>
@@ -290,9 +295,9 @@
               </figcaption>
             </figure> 
           </div><!-- col_16 -->
-          
+
           <div class="col_16">
-            <figure>
+            <figure class="content-figure">
               <img data-aload="images/mercados/mercados-7-construccion.jpg" alt="CONSTRUCCIÓN">
 
               <figcaption>
@@ -300,7 +305,7 @@
 
                 <div class="box">
                   <h2>CONSTRUCCIÓN</h2>
-                
+
                   <ul>
                     <li>Aisladores Eléctricos</li>
                     <li>Cables</li>
@@ -312,9 +317,9 @@
               </figcaption>
             </figure>
           </div><!-- col_16 -->
-          
+
           <div class="col_16">
-            <figure>
+            <figure class="content-figure">
               <img data-aload="images/mercados/mercados-8-rodados.jpg" alt="RODADOS">
 
               <figcaption>
@@ -335,19 +340,19 @@
               </figcaption>
             </figure>
           </div><!-- col_16 -->
-        
+
         </div><!-- .control -->
       </div><!-- .accordeon_content #mercados -->
-      
+
       <section data-aload id="laboratorio" class="full-height">
-        
+
         <h1><em>LABORATORIO</em> <span>Calidad, Investigación<br> y Desarrollo</span></h1>
-        
+
         <a href="#mas_info_laboratorio" class="btn btn_plus" title="ver más">+</a>
       </section>
-      
-      <div class="accordeon_content" id="mas_info_laboratorio"> 
-        
+
+      <div class="accordeon_content" id="mas_info_laboratorio">
+
         <div class="control blue_overlay">
           <div class="col_20">
             <h2>Calidad</h2>
@@ -361,7 +366,7 @@
         <div class="control">
           <div class="col_33">
             <img data-aload="images/laboratorio/laboratorio-certificacion.jpg" alt="Certificación de gestión de calidad ISO 9000/9001">
-            
+
             <div class="content">
               <h2>Certificación de gestión de calidad ISO 9000/9001:</h2>
 
@@ -406,13 +411,13 @@
       </div><!-- .accordeon_content #laboratorio -->
 
       <section data-aload id="instalaciones" class="full-height">
-        <h1><em>INSTALACIONES</em> Y PROCESOS</h1>
+        <h1><em>INSTALACIONES</em><br> Y PROCESOS</h1>
         <a href="#mas_info_instalaciones" class="btn btn_plus gray-5" title="ver más">+</a>
       </section>
 
-      <div class="accordeon_content" id="mas_info_instalaciones"> 
+      <div class="accordeon_content" id="mas_info_instalaciones">
         <div class="control">
-          
+
           <div class="col_50 gray-6">
             <img data-aload="images/instalaciones/instalaciones-1.jpg" alt="Líneas de Producción">
 
@@ -450,7 +455,7 @@
 
         </div><!-- .control -->
       </div><!-- .accordeon_content -->
-      
+
       <section id="logistica">
         <ul class="bxslider">
           <li>
@@ -470,7 +475,7 @@
           </li>
         </ul><!-- bxslider -->
       </section>
-      
+
       <div id="partners">
         <div class="control">
           <div class="title-separator">
@@ -489,7 +494,7 @@
           </ul><!-- partners-list -->
         </div>
       </div><!-- partners -->
-      
+
       <section id="contacto" class="full-height">
         <div data-aload class="header_contact">
           <h3>Contacto</h3>
@@ -502,7 +507,7 @@
 
         <div class="contact_form_content">
           <div class="control">
-            
+
             <div class="col_50">
               <form id="contact_form">
                 <div class="form-control">
@@ -537,7 +542,7 @@
           </div>
         </div>
       </section>
-    
+
     </article>
 
     <footer>
@@ -555,7 +560,7 @@
       r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
       ga('create','UA-XXXXX-X');ga('send','pageview');
     </script>
-    
+
     <!-- Google Maps -->
     <script src="https://maps.googleapis.com/maps/api/js?v=3.exp"></script>
 
@@ -564,8 +569,10 @@
     <script src="../bower_components/jquery/dist/jquery.js"></script>
     <script src="../bower_components/fitvids/jquery.fitvids.js"></script>
     <script src="../bower_components/loaders.css/loaders.css.js"></script>
-    <script src="../bower_components/aload/dist/aload.min.js"></script>
-    <script src="../bower_components/dw-bxslider-4/dist/jquery.bxslider.min.js"></script>
+    <script>
+      function aload(t){"use strict";t=t||window.document.querySelectorAll("[data-aload]"),void 0===t.length&&(t=[t]);var a,e=0,r=t.length;for(e;r>e;e+=1)a=t[e],a["LINK"!==a.tagName?"src":"href"]=a.getAttribute("data-aload"),a.removeAttribute("data-aload");return t}
+    </script>
+    <script src="../bower_components/dw-bxslider-4/src/js/jquery.bxslider.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

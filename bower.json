@@ -2,13 +2,13 @@
   "name": "isisa-com",
   "private": true,
   "dependencies": {
-    "jquery": "~2.1.1",
-    "modernizr": "~2.8.1",
+    "jquery": "~2.1.4",
+    "modernizr": "~2.8.3",
     "fitvids": "~1.1.0",
     "animate.css": "~3.3.0",
     "loaders.css": "~0.1.1",
     "aload": "~1.2.1",
-    "dw-bxslider-4": "~4.2.4"
+    "dw-bxslider-4": "~4.2.5"
   },
   "devDependencies": {
     "chai": "~3.0.0",

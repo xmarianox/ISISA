@@ -52,7 +52,7 @@ header {
   @include position(fixed, 0,0,0, auto);
   z-index: 300;
   @include box-shadow(0 0 6px, $black-50);
-  
+
   .logo {
     float:left;
   }
@@ -60,12 +60,6 @@ header {
   #nav-icon {
     float:right;
   }
-
-  @media(max-width: $sreen_md) {
-    @include size(100%, 54px);
-    padding: 10px 16px;
-  }
-
 }
 
 // menu
@@ -86,7 +80,7 @@ header {
     @include size(100%, auto);
     border-bottom: 1px solid $white;
     display: block;
-    
+
     &:last-child {
       border-bottom: none;
     }
@@ -100,33 +94,19 @@ header {
       text-align: center;
     }
   }
-  
-  // desktop
-  @media(max-width: $sreen_md) {
-    top: 54px;
-  }
-  // mobile
-  @media(max-width: $sreen_mobile_xs) {
-    max-width: 100%;
-  }
 }
 
 // contenidos
 article {
   @include size(100%, auto);
   margin-top: 64px;
-
-  @media(max-width: $sreen_md) {
-    margin-top: 54px;
-  }
-  
 }
 
 section {
   @include size(100%, auto);
   overflow: hidden;
   position: relative;
-  
+
   &#mezclas {
     @include background-fixed('../images/mezclas/bg-mezclas.jpg', 50%, 50%);
     background-size: cover;
@@ -143,59 +123,18 @@ section {
     @include background-fixed('../images/instalaciones/bg-instalaciones.jpg', 50%, 50%);
     background-size: cover;
   }
-
-  @media(max-width: $sreen_tablet_land) {
-    
-    &#mezclas, &#mercados, &#laboratorio, &#instalaciones {
-      background-position: center center;
-      background-attachment: initial;
-    }
-  
-  }
-  
-  @media(max-width: $sreen_tablet_port) {
-    &#nosotros {
-      background: url(../images/video-size.jpg) center center no-repeat;
-      background-size: cover;
-    }
-
-    &#mezclas {
-      background: url(../images/mezclas/bg-mezclas-mobile.jpg) center center no-repeat;
-      background-size: cover;
-    }
-
-    &#mercados {
-      background: url(../images/mercados/bg-mercados-mobile.jpg) center center no-repeat;
-      background-size: cover;
-    }
-
-    &#laboratorio {
-      background: url(../images/laboratorio/bg-laboratorio-mobile.jpg) center center no-repeat;
-      background-size: cover;
-    }
-
-    &#instalaciones {
-      background: url(../images/instalaciones/bg-instalaciones-mobile.jpg) center center no-repeat;
-      background-size: cover;
-    }
-  
-  }
-
   &#logistica {
     background-color: $black;
   }
-
   &#contacto {
     background-color: $black;
   }
-  
   // btn_plus
   .btn_plus {
     @include position(absolute, auto, 0, 15%, 0);
     display: block;
     margin: 0 auto;
   }
-
   h1 {
     font-family: $Helvetica_L;
     font-size: $title-size;
@@ -205,7 +144,6 @@ section {
       font-family: $Helvetica_L;
     }
   }
-
 }
 // Home / Intro
 // blue overlay
@@ -247,23 +185,12 @@ section {
     margin: 0 auto;
     display: block;
   }
-
-  @media(max-width: $sreen_mobile_xl) {
-    .isologo_isisa {
-      margin: 10% auto 30px;
-    }
-  }
-
 }
 
 #content_video {
   @include size(100%, 100%);
   @include position(absolute, 0, 0, 0, 0);
   overflow: hidden;
-
-  @media(max-width: $sreen_tablet_port) {
-    display: none;
-  }
 }
 
 iframe {
@@ -280,10 +207,6 @@ iframe {
 
   h1 {
     margin-top: 10%;
-
-    @media(max-width: $sreen_tablet_port) {
-      margin-top: 30%;
-    }
   }
 }
 
@@ -292,13 +215,9 @@ iframe {
   position: relative;
 
   h1 {
-    margin-top: 16%; 
+    margin-top: 16%;
     em {
       display: block;
-    }
-
-    @media(max-width: $sreen_tablet_port) {
-      margin-top: 30%;
     }
   }
 
@@ -311,7 +230,7 @@ iframe {
     padding: 10px;
     border: 1px solid $green-2;
     cursor: pointer;
-    
+
     p {
       font-size: 16px;
       line-height: 19px;
@@ -326,7 +245,7 @@ iframe {
   h1 {
     color: $blue-1;
     margin-top: 5%;
-    
+
     em {
       display: inline-block;
       font-size: $title-size;
@@ -338,15 +257,6 @@ iframe {
       line-height: 32px;
       text-align: left;
     }
-
-    @media(max-width: $sreen_tablet_port) {
-      margin-top: 30%;
-
-      span {
-        font-size: 22px;
-        line-height: 22px;
-      }
-    }
   }
 }
 
@@ -355,11 +265,7 @@ iframe {
   position: relative;
 
   h1 {
-    margin-top: 20%;
-
-    @media(max-width: $sreen_tablet_port) {
-      margin-top: 30%;
-    }
+    margin-top: 15%;
   }
 
   .btn_plus {
@@ -371,13 +277,13 @@ iframe {
 
 // Logistica
 #logistica {
-  
+
   .bx-wrapper {
     border: none !important;
     box-shadow: none !important;
     background: $black;
     margin: 0 auto;
-    
+
     .bx-pager {
       padding-top: 0;
       bottom: 30px;
@@ -391,13 +297,13 @@ iframe {
           @include size(15px, 15px);
           @include border-radius(50%);
 
-          &.active, 
-          &:focus, 
+          &.active,
+          &:focus,
           &:hover {
             background: $blue-5;
           }
         }
-      } 
+      }
     }
 
     .bx-controls-direction {
@@ -425,7 +331,7 @@ iframe {
         line-height: 40px;
         margin-bottom: 10px;
       }
-      
+
       p {
         font-family: $Helvetica_L;
         @include text-shadow(1px 1px 1px, $black-50);
@@ -457,7 +363,7 @@ iframe {
     text-align: center;
     position: relative;
     margin-bottom: 20px;
-    
+
     h3 {
       font-family: $Helvetica_L;
       font-size: 35px;
@@ -491,27 +397,6 @@ iframe {
       display: block;
       margin: 0 auto;
     }
-
-    @media(max-width: $sreen_mobile_xl) {
-      display: block;
-
-      li {
-        @include size(50%, auto);
-        display: block;
-        float: left;
-
-        &:last-child {
-          @include size(100%, auto);
-        }
-      }
-    }
-
-    @media(max-width: $sreen_mobile_xl) {
-      li {
-        @include size(50%, 120px);
-      }
-    }
-
   }
 }
 
@@ -553,10 +438,6 @@ iframe {
     @include size(100%, 55%);
     background: url(../images/contacto/form-bck.jpg) 0 0 no-repeat;
     background-size: cover;
-
-    @media(max-width: $sreen_mobile_xl) {
-      @include size(100%, auto);
-    }
   }
 
   #map-canvas {
@@ -575,17 +456,13 @@ iframe {
           color: $blue-1;
         }
       }
-      
+
       p {
         font-size: 12px;
         line-height: 14px;
       }
 
     }
-  }
-
-  @media(max-width: $sreen_mobile_xl) {
-    @include size(100%, auto !important);
   }
 }
 
@@ -603,10 +480,6 @@ iframe {
     float: left;
     width: 50%;
     padding: 30px 15px;
-
-    @media(max-width: $sreen_mobile_xl) {
-      @include size(100%, auto);
-    }
   }
 
   h3, p {
@@ -673,12 +546,7 @@ footer {
     float:right;
     line-height: 28px;
   }
-
-  @media(max-width: $sreen_tablet_port) {
-    @include size(100%, auto);
-
-    .copy {
-      width: calc(100% - 150px);
-    }
-  }
 }
+
+// RESPONSIVE
+@import 'responsive';

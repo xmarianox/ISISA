@@ -4,7 +4,6 @@
 	overflow: hidden;
 	margin: 0 auto;
 	display: none;
-	
 	&.visible {
 		display: block;
 	}
@@ -22,7 +21,7 @@
 		font-size: $accordeon-sub-title;
 		line-height: $accordeon-text-line-height;
 	}
-	
+
 	p {
 		font-family: $Helvetica_L;
 		font-size: $accordeon-text;
@@ -33,7 +32,7 @@
 	ul {
 		list-style: disc;
 		padding-left: 20px;
-		
+
 		li {
 			font-family: $Helvetica_L;
 			font-size: $accordeon-text;
@@ -61,7 +60,7 @@
 		padding: 30px 15px;
 		overflow: hidden;
 	}
-	
+
 	.col_20 {
 		@include size(20%, 100%);
 		display: table-cell;
@@ -88,7 +87,7 @@
 		}
 		&.blue-4 {
 			background-color: $blue-4;
-		}		
+		}
 	}
 
 	.col_33 {
@@ -143,7 +142,7 @@
 	.col_50 {
 		@include size(50%, 100%);
 		display: table-cell;
-		
+
 		&.gray-6 {
 			background-color: $gray-6;
 		}
@@ -163,48 +162,26 @@
 			padding-left: 40px;
 		}
 	}
-	
+
 	.col_80 {
 		@include size(80%, 100%);
 		display: table-cell;
 		padding: 40px 30px;
 	}
 
+	&#mas_info_mezcla {
+		.content {
+			  min-height: 280px;
+		}
+	}
+
 	&#mas_info_instalaciones {
-		.col_50 { 
+		.col_50 {
 			p, ul {
 				float: none;
 				width: 100%;
 				margin-bottom: 20px;
 			}
-		}
-	}
-
-	// mobile
-	@media(max-width: $sreen_tablet_port) {
-		.control {
-			display: block;
-		}
-		.col_16 {
-			@include size(50%, auto);
-			padding: 15px;
-			display: block;
-			float: left;
-		}
-		.col_20,
-		.col_25,
-		.col_33,
-		.col_50,
-		.col_80 {
-			@include size(100%, auto);
-			display: block;
-			float: left;
-		}
-		.col_20 {
-			padding-top: 15px;
-		}
-		.col_80 {
-			padding: 20px;
 		}
 	}
 }
@@ -217,13 +194,28 @@
 .content {
 	padding: 30px 15px 30px 30px;
 	overflow: hidden;
+}
+.content-header {
+	@include size(100%, auto);
+	display: block;
+	border: none;
+	overflow: hidden;
+	position: relative;
 
-	@media(max-width: $sreen_tablet_port) {
-		padding: 30px 20px;
+	figcaption {
+		@include size(100%, 100%);
+		@include position(absolute, 0, 0, 0, 0);
+		overflow: hidden;
+		z-index: 2;
+		padding: 15px;
+
+		h2 {
+			@include text-shadow(1px 1px 1px, $black-50);
+		}
 	}
 }
 // mercados boxs
-figure {
+.content-figure {
 	@include size(100%, 100%);
 	position: relative;
 	overflow: hidden;
@@ -239,39 +231,12 @@ figure {
 		&:last-child {
 			margin-top: 9px;
 		}
-
-		@media(max-width: $sreen_md) {
-	  	&:first-child {
-				margin-bottom: 3px;
-			}
-			&:last-child {
-				margin-top: 7px;
-			}
-		}
-
-		@media(max-width: $sreen_tablet_port) {
-			&:first-child {
-				margin-bottom: 10px;
-			}
-			&:last-child {
-				margin-top: 10px;
-			}
-		}
-
-		@media(max-width: $sreen_mobile_xl) {
-	  	&:first-child {
-				margin-bottom: 3px;
-			}
-			&:last-child {
-				margin-top: 7px;
-			}
-		}
 	}
 
 	img {
 		@include size(100%, auto);
 	}
-	
+
 	&:hover {
 		> figcaption {
 			display: block;
@@ -290,7 +255,7 @@ figure {
 	@include size(100%, 100%);
 	max-height: 316px;
 	background: url(../images/laboratorio/laboratorio-calidad.jpg) center center no-repeat;
-	
+
 	.col_20 {
 		vertical-align: middle;
 	}
@@ -310,24 +275,6 @@ figure {
 		margin: 0;
 		float: left;
 	}
-	// mobile
-	@media(max-width: $sreen_tablet_port) {
-		@include size(100%, auto);
-		max-height: 100%;
-		background: url(../images/laboratorio/laboratorio-calidad-mobile.jpg) center center no-repeat;
-		background-size: cover;
-
-		h2 {
-			font-family: $Helvetica_L;
-			font-size: $accordeon-title;
-			line-height: $accordeon-title-line-height;
-		}
-
-		p {
-			font-size: $accordeon-text;
-			line-height: $accordeon-text-line-height;
-		}
-	}	
 }
 
 .box {
@@ -355,19 +302,6 @@ figure {
 			line-height: 18px;
 		}
 	}
-
-	@media(max-width: $sreen_md) {
-		h2 {
-			font-size: 16px;
-			line-height: 18px;
-		}
-		ul {
-			li {
-				font-size: 13px;
-				line-height: 16px;
-			}
-		}		
-	}
 }
 
 .download {
@@ -382,21 +316,5 @@ figure {
 	.btn {
 		display: inline-block;
 		vertical-align: bottom;
-	}
-
-	@media(max-width: $sreen_md) {
-		img {
-			@include size(90px, auto);
-			vertical-align: top;
-		}
-	}
-	@media(max-width: $sreen_tablet_port) {
-		img {
-			@include size(80px, auto);
-			margin: 0 7px;
-		}
-		.btn {
-			vertical-align: top;
-		}
 	}
 }

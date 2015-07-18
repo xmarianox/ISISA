@@ -42,7 +42,7 @@
 		&:hover,
 		&:focus {
 			background-color: $blue-5;
-		} 
+		}
 	}
 
   &.btn_descargar {
@@ -50,14 +50,6 @@
     @include size(111px, 103px);
     text-indent: -9999px;
   }
-
-  @media(max-width: $sreen_tablet_port) {
-    &.btn_descargar {
-      @include size(80px, 73px);
-      background-size: cover;
-    } 
-  }
-
 }
 
 // Nav icon component
@@ -83,7 +75,7 @@
     @include transform-rotate(0deg);
     // transition
     @include transition(.25s, ease-in-out);
-    
+
     &:nth-child(1) {
       top: 0px;
     }
@@ -104,7 +96,6 @@
       }
       &:nth-child(2) {
         @include transform-rotate(45deg);
-  
       }
       &:nth-child(3) {
         @include transform-rotate(-45deg);
@@ -116,11 +107,4 @@
       }
     }
   }
-  
-  // latop
-  @media(max-width: $sreen_md) {
-    @include size(45px, 30px);
-    margin: 2px auto;
-  }
-
 }

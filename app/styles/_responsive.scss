@@ -1,32 +1,273 @@
 //_responsive.scss
-@media(max-width: 1024px) {
+// screen size
+$sreen_md: 1366px;
+// tablet
+$sreen_tablet_land: 1024px;
+$sreen_tablet_port: 768px;
+//
+$sreen_mobile_xl: 600px;
+$sreen_mobile_xs: 414px;
+
+// DESKTOP
+@media($sreen_md) {
+  $title-size: 75px;
+  $sub-title-size: 65px;
+  $accordeon-title: 24px;
+  $accordeon-title-line-height: 28px;
+
+  header {
+    @include size(100%, 54px);
+    padding: 10px 16px;
+  }
+  .menu {
+    top: 54px;
+  }
+  article {
+    margin-top: 54px;
+  }
+  .content-figure {
+    &._50 {
+      &:first-child {
+        margin-bottom: 3px;
+      }
+      &:last-child {
+        margin-top: 7px;
+      }
+    }
+  }
+  .box {
+    h2 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    ul {
+      li {
+        font-size: 13px;
+        line-height: 16px;
+      }
+    }
+  }
+  .download {
+    img {
+      @include size(90px, auto);
+      vertical-align: top;
+    }
+  }
+
+  .logo {
+    &.logo_isisa {
+      @include size(124px, 32px);
+    }
+  }
+  #nav-icon {
+    @include size(45px, 30px);
+    margin: 2px auto;
+  }
+}
+// TABLET
+@media(max-width: $sreen_tablet_land) {
   section {
-    &#mezclas,
-    &#mercados,
-    &#laboratorio,
-    &#instalaciones {
+    &#mezclas, &#mercados, &#laboratorio, &#instalaciones {
       background-position: center center;
       background-attachment: initial;
+    }
+  }
+}
+
+@media(max-width: $sreen_tablet_port) {
+  $title-size: 55px;
+  $sub-title-size: 45px;
+
+  .btn {
+    &.btn_descargar {
+      @include size(80px, 73px);
       background-size: cover;
     }
   }
-  
-  .contact_form_content {
-    p {
-      em {
-        a {
-          text-decoration: none;
-          color: $white;
-        }
-      }
-    } 
-  }
 
-  .form-control {
-    textarea {
-      @include size(100%, 90px);
+  section {
+    &#nosotros {
+      background: url(../images/video-size.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#mezclas {
+      background: url(../images/mezclas/bg-mezclas-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#mercados {
+      background: url(../images/mercados/bg-mercados-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#laboratorio {
+      background: url(../images/laboratorio/bg-laboratorio-mobile.jpg) center center no-repeat;
+      background-size: cover;
+    }
+    &#instalaciones {
+      background: url(../images/instalaciones/bg-instalaciones-mobile.jpg) center center no-repeat;
+      background-size: cover;
     }
   }
-    
+  #content_video {
+    display: none;
+  }
+  #mezclas,
+  #mercados,
+  #laboratorio,
+  #instalaciones{
+    h1 {
+      margin-top: 30%;
+    }
+  }
+  #laboratorio {
+    h1 {
+      span {
+        font-size: 22px;
+        line-height: 22px;
+      }
+    }
+  }
+  footer {
+    @include size(100%, auto);
+    .copy {
+      width: calc(100% - 150px);
+    }
+  }
+
+  // ACCORDEON
+  .accordeon_content {
+    .control {
+      display: block;
+    }
+    .col_16 {
+      @include size(50%, auto);
+      padding: 15px;
+      display: block;
+      float: left;
+    }
+    .col_20,
+    .col_25,
+    .col_33,
+    .col_50,
+    .col_80 {
+      @include size(100%, auto);
+      display: block;
+      float: left;
+    }
+    .col_20 {
+      padding-top: 15px;
+    }
+    .col_80 {
+      padding: 20px;
+    }
+  }
+  .content {
+    padding: 30px 20px;
+  }
+  .content-figure {
+    &._50 {
+      &:first-child {
+        margin-bottom: 10px;
+      }
+      &:last-child {
+        margin-top: 10px;
+      }
+    }
+  }
+  .blue_overlay {
+    @include size(100%, auto);
+    max-height: 100%;
+    background: url(../images/laboratorio/laboratorio-calidad-mobile.jpg) center center no-repeat;
+    background-size: cover;
+
+    h2 {
+      font-family: $Helvetica_L;
+      font-size: $accordeon-title;
+      line-height: $accordeon-title-line-height;
+    }
+
+    p {
+      font-size: $accordeon-text;
+      line-height: $accordeon-text-line-height;
+    }
+  }
+  .download  {
+    img {
+      @include size(80px, auto);
+      margin: 0 7px;
+    }
+    .btn {
+      vertical-align: top;
+    }
+  }
+}
+
+// MOBILE
+@media(max-width: $sreen_mobile_xl) {
+  $title-size: 45px;
+  $sub-title-size: 35px;
+  
+  .overlay {
+    .isologo_isisa {
+      margin: 10% auto 30px;
+    }
+  }
+  
+  .content-figure {
+    &._50 {
+      &:first-child {
+        margin-bottom: 3px;
+      }
+      &:last-child {
+        margin-top: 7px;
+      }
+    }
+  }
+  #contacto {
+    @include size(100%, auto !important);
+
+    .contact_form_content {
+      @include size(100%, auto);
+    }
+  }
+  .contact_form_content {
+    .col_50 {
+      @include size(100%, auto);
+      }
+  }
+  .logo {
+    &.isologo_isisa {
+      @include size(120px, 120px);
+    }
+  }
+}
+
+@media(max-width: $sreen_mobile_xs) {
+  $title-size: 35px;
+  $sub-title-size: 25px;
+
+  .menu {
+    max-width: 100%;
+  }
+  #partners {
+    .partners-list {
+      display: block;
+
+      li {
+        @include size(50%, 120);
+        display: block;
+        float: left;
+
+        &:last-child {
+          @include size(100%, auto);
+        }
+      }
+    }
+  }
+
+  .overlay {
+    h1 {
+      font-size: $title-size;
+    }
+  }
 
 }

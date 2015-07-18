@@ -5,9 +5,6 @@
 1) Menú Principal Arriba a la derecha: Cuando clickeas en "NOSOTROS" debería abrir la sección de Nosotros (Quienes Somos, Mision, Vision, etc.)
 * Lo vemos mañana 
 
-4) "Mezclas" y "Presentación": Poner los textos "Mezclas" y "Presentación"  sobre las fotos. y el texto de "Mezclas" repartirlo en 3 columnas para achicar la caja. (Quedaría una columna con el texto y dos columnas con el listado repartido en las dos). Despues de reemplazar las imgs, fijate de distribuir los espacios para achicar la caja de alto.
-* Se rompe la maqueta.
-
 6) Laboratorio. Mejorar lectura de Título: Separar LABORATORIO. de: Calidad, Investigación y Desarrollo (ahora queda muy junto y se confunde la lectura)
 * Lo vemos mañana  
 
@@ -46,4 +43,7 @@ Ensayos Realizados:
 Reometría / Viscosidad / Densidad / Abrasión / Traccion / Elongacion / Resistencia al desgarre / Compresión Set / Visual de Disperión / Dureza / Flexión / Envejecimiento / Fluencia / Deformación / Punto de fusión / Humedad / Espectofotometría
 Y abajo de eso poner los 3 loguitos (adjunto en ZIP).
 Faltan los 3 logos
+Listo
+
+* "Mezclas" y "Presentación": Poner los textos "Mezclas" y "Presentación"  sobre las fotos. y el texto de "Mezclas" repartirlo en 3 columnas para achicar la caja. (Quedaría una columna con el texto y dos columnas con el listado repartido en las dos). Despues de reemplazar las imgs, fijate de distribuir los espacios para achicar la caja de alto.
 Listo

@@ -1,34 +1,27 @@
 // mixins
-
-// 
 @mixin border-radius($radius) {
   -webkit-border-radius: $radius;
      -moz-border-radius: $radius;
       -ms-border-radius: $radius;
           border-radius: $radius;
 }
-
 //
 @mixin background-fixed($image, $pos-x, $pos-y) {
 	background: url($image) $pos-x $pos-y fixed no-repeat;
 }
-
 //
 @mixin size($width, $height) {
 	width: $width;
 	height: $height;
 }
-
 // box-shadow
 @mixin box-shadow($angle, $color) {
 	box-shadow: $angle $color;
 }
-
 // text-shadow
 @mixin text-shadow($angle, $color) {
 	text-shadow: $angle $color;
 }
-
 // position absolute
 @mixin position($position, $top, $left, $bottom, $right) {
 	position: $position;
@@ -37,7 +30,6 @@
 	bottom: $bottom;
 	right: $right;
 }
-
 // transform
 @mixin transform-rotate($angle) {
   -webkit-transform: rotate($angle);
@@ -45,7 +37,6 @@
   -o-transform: rotate($angle);
   transform: rotate($angle);
 }
-
 // transition
 @mixin transition($time, $type) {
   -webkit-transition: $time $type;
