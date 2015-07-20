@@ -80,7 +80,7 @@ $(document).ready(function() {
 			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
 		}
 	});
-	// mercados 
+	// mercados
 	$('.label_span').click(function(event) {
 		event.preventDefault();
 		var target = $(this).attr('data-ref');
