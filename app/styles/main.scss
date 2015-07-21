@@ -136,7 +136,7 @@ section {
     margin: 0 auto;
   }
   h1 {
-    font-family: $Helvetica_L;
+    font-family: $Helvetica_M;
     font-size: $title-size;
     @include text-shadow(1px 1px 1px, $black-50);
     text-align: center;
@@ -169,7 +169,7 @@ section {
     }
 
     span {
-      font-family: $Helvetica_L;
+      font-family: $Helvetica_T;
       display: block;
       font-size: $sub-title-size;
     }
@@ -207,6 +207,11 @@ iframe {
 
   h1 {
     margin-top: 10%;
+    font-family: $Helvetica_T;
+
+    em {
+      font-family: $Helvetica_M;
+    }
   }
 }
 
@@ -216,8 +221,10 @@ iframe {
 
   h1 {
     margin-top: 16%;
+    font-family: $Helvetica_T;
     em {
       display: block;
+      font-family: $Helvetica_M;
     }
   }
 
@@ -247,11 +254,13 @@ iframe {
     margin-top: 5%;
 
     em {
+      font-family: $Helvetica_T;
       display: inline-block;
       font-size: $title-size;
       line-height: $title-size;
     }
     span {
+      font-family: $Helvetica_M;
       display: inline-block;
       font-size: 32px;
       line-height: 32px;
@@ -266,6 +275,9 @@ iframe {
 
   h1 {
     margin-top: 15%;
+    em {
+      font-family: $Helvetica_B;
+    }
   }
 
   .btn_plus {
@@ -289,6 +301,19 @@ iframe {
       bottom: 30px;
     }
 
+    .bx-loading {
+      background: $white url(../images/bx_loader.gif) center center no-repeat;
+    }
+    // controls
+    .bx-controls-direction a {
+      @include size(47px, 92px);
+    }
+    .bx-prev {
+      background: url(../images/controls.png) 0 0 no-repeat;
+    }
+    .bx-next{
+      background: url(../images/controls.png) -49px 0 no-repeat;
+    }
     .bx-pager {
       &.bx-default-pager {
         a {
@@ -410,7 +435,7 @@ iframe {
     position: relative;
 
     h3 {
-      font-family: $Helvetica_L;
+      font-family: $Helvetica_T;
       font-size: $title-size;
       @include text-shadow(1px 1px 1px, $black-50);
       @include position(absolute, auto, 5%, 5%, auto);
