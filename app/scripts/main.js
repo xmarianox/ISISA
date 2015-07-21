@@ -2,7 +2,7 @@
 /* global $, aload, google */
 
 // Dinamic Height
-function calcutaleHeight(element) {
+function calculateHeight(element) {
 	'use strict';
 	var windowHeight = $(window).height();
 	var finalHeight = windowHeight - $('header').height();
@@ -43,43 +43,55 @@ $(window).load(function() {
 	'use strict';
 	loader();
 	aload();
-	calcutaleHeight('.full-height');
+	calculateHeight('.full-height');
 });
 
 // Document ready
 $(document).ready(function() {
 	'use strict';
+
 	// resize
 	$(window).resize(function() { calcutaleHeight('.full-height'); });
+
 	// videos
 	$('#content_video').fitVids();
+
 	// anchor navigation
 	$('a[href*=#]:not([href=#])').click(function() {
 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
-				$('html,body').animate({ scrollTop: target.offset().top }, 1000);
+				if($(this).hasClass('btn_plus')){ //mas info
+					$(target).toggleClass('visible animated slideInUp');
+					if($(target).hasClass('visible')){
+						$(this).text('-');
+						$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
+					}
+					else{
+						$(this).text('+');
+					}
+				}
+				else{ //anchors
+					if(target.attr('id') === 'nosotros'){
+						target.find('.btn_plus').click();
+					}
+					else{
+						$('html,body').animate({ scrollTop: target.offset().top }, 1000);	
+					}
+				}
 				return false;
 			}
 		}
 	});
+
 	// menu
 	$('#nav-icon').click(function(event) {
 		event.preventDefault();
 		$(this).toggleClass('open');
 		$('.menu').toggleClass('open animated fadeIn');
 	});
-	// mas info.
-	$('.btn_plus').click(function(event) {
-		event.preventDefault();
-		var target = $(this).attr('href');
-		//console.log(target);
-		$(target).toggleClass('visible animated slideInUp');
-		if($(target).hasClass('visible')){
-			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
-		}
-	});
+
 	// mercados 
 	$('.label_span').click(function(event) {
 		event.preventDefault();
@@ -90,16 +102,20 @@ $(document).ready(function() {
 			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
 		}
 	});
+
 	// hover de las columnas
 	$('.col_25').hover(function(event) {
 		event.preventDefault();
 		$('.col_25').removeClass('active');
 		$(this).addClass('active');
 	});
+	
 	// bxslider config
 	$('.bxslider').bxSlider({ mode: 'horizontal', pager: true, auto: true });
+	
 	// map overlay
 	$('.map_overlay').click(function() {
 		$(this).addClass('hide');
 	});
+
 });
