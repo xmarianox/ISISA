@@ -46,6 +46,12 @@ $(window).load(function() {
 	calculateHeight('.full-height');
 });
 
+function openMasInfo(target){
+	$(target).addClass('visible animated slideInUp');
+	$('a[href='+target+'].btn_plus').text('-');
+	$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
+}
+
 // Document ready
 $(document).ready(function() {
 	'use strict';
@@ -57,28 +63,16 @@ $(document).ready(function() {
 	$('#content_video').fitVids();
 
 	// anchor navigation
-	$('a[href*=#]:not([href=#])').click(function() {
+	$('a[href*=#]:not([href=#],.btn_plus)').click(function() {
 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 			var target = $(this.hash);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
-				if($(this).hasClass('btn_plus')){ //mas info
-					$(target).toggleClass('visible animated slideInUp');
-					if($(target).hasClass('visible')){
-						$(this).text('-');
-						$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
-					}
-					else{
-						$(this).text('+');
-					}
+				if(this.hash === '#nosotros'){
+					openMasInfo(target.find('.btn_plus').attr('href'));
 				}
-				else{ //anchors
-					if(target.attr('id') === 'nosotros'){
-						target.find('.btn_plus').click();
-					}
-					else{
-						$('html,body').animate({ scrollTop: target.offset().top }, 1000);	
-					}
+				else{
+					$('html,body').animate({ scrollTop: target.offset().top }, 1000);	
 				}
 				return false;
 			}
@@ -91,16 +85,27 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 		$('.menu').toggleClass('open animated fadeIn');
 	});
+ 	
+ 	//mas info
+	$('btn_plus').click(function(event){
+		event.preventDefault();
+		var target = $(this).attr('href');
+		
+		if($(target).hasClass('visible')){
+			$(target).removeClass('visible animated slideInUp');
+			$(this).text('+');
+		}
+		else{
+			openMasInfo(target);
+		}
+	});			
 
 	// mercados 
 	$('.label_span').click(function(event) {
 		event.preventDefault();
 		var target = $(this).attr('data-ref');
 		//console.log(target);
-		$(target).toggleClass('visible animated slideInUp');
-		if($(target).hasClass('visible')){
-			$('html, body').stop().animate({'scrollTop': $(target).prev().offset().top + $(target).outerHeight()}, 400);
-		}
+		openMasInfo(target);
 	});
 
 	// hover de las columnas
