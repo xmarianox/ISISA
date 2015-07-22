@@ -210,7 +210,11 @@
 		padding: 15px;
 
 		h2 {
+			font-family: $Helvetica_T;
+			font-size: 35px;
+			line-height: 40px;
 			@include text-shadow(1px 1px 1px, $black-50);
+			@include position(absolute, auto, 20px, 0px, auto);
 		}
 	}
 }

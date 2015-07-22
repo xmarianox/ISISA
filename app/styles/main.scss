@@ -307,6 +307,7 @@ iframe {
     // controls
     .bx-controls-direction a {
       @include size(47px, 92px);
+      top: 40%;
     }
     .bx-prev {
       background: url(../images/controls.png) 0 0 no-repeat;

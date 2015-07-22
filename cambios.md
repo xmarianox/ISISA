@@ -2,13 +2,15 @@
 
 ## FALTANTES
 
-1) Menú Principal Arriba a la derecha: Cuando clickeas en "NOSOTROS" debería abrir la sección de Nosotros (Quienes Somos, Mision, Vision, etc.)
-* Lo vemos mañana 
+> colocar codigo Analitics real
 
 6) Laboratorio. Mejorar lectura de Título: Separar LABORATORIO. de: Calidad, Investigación y Desarrollo (ahora queda muy junto y se confunde la lectura)
 * Lo vemos mañana  
 
 ## CERRADOS
+
+* Menú Principal Arriba a la derecha: Cuando clickeas en "NOSOTROS" debería abrir la sección de Nosotros (Quienes Somos, Mision, Vision, etc.)
+Listo.
 
 * Nuestras Mezclas: Reemplazar las 3 Fotos. 
 Van adjuntas sin los titulos (te vas a dar cuenta cuales son desktop y cuales mobile por el tamaño de las fotos)  
