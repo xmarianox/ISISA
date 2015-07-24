@@ -5,6 +5,7 @@ $sreen_md: 1366px;
 $sreen_tablet_land: 1024px;
 $sreen_tablet_port: 768px;
 //
+$sreen_mobile_xl_port: 960px;
 $sreen_mobile_xl: 600px;
 $sreen_mobile_xs: 414px;
 
@@ -295,7 +296,15 @@ $sreen_mobile_xs: 414px;
   }
   #contacto {
     @include size(100%, auto !important);
-
+    .header_contact {
+      @include size(100%, 120px);
+      h3 {
+        font-size: $title-size;
+      }
+    }
+    .contact_map {
+      @include size(100%, 300px);
+    }
     .contact_form_content {
       @include size(100%, auto);
     }
@@ -310,21 +319,89 @@ $sreen_mobile_xs: 414px;
       @include size(120px, 120px);
     }
   }
+
+  // LOGISTICA
+  #logistica {
+    .bx-wrapper {
+      .bx-controls-direction a {
+        width: 35px;
+        height: 83px;
+        top: 30%;
+        background-size: cover;
+      }
+      .custom_caption {
+        position: relative;
+        left: auto;
+        bottom: auto;
+        max-width: 100%;
+        padding: 15px 15px 80px;
+      }
+    }
+  }
 }
 
 @media(max-width: $sreen_mobile_xs) {
   $title-size: 35px;
+  $title-line-height: 45px;
   $sub-title-size: 25px;
 
   .menu {
     max-width: 100%;
+  }
+
+  section {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+    }
+  }
+  .overlay {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+      span {
+        font-size: $sub-title-size;
+        line-height: $title-line-height;
+      }
+    }
+  }
+
+  #laboratorio {
+    h1 {
+      em {
+        font-size: $title-line-height;
+        line-height: $title-line-height;
+      }
+    }
+  }
+  #logistica {
+    .bx-wrapper {
+      .bx-controls-direction a {
+        width: 35px;
+        height: 83px;
+        top: 30%;
+        background-size: cover;
+      }
+      .custom_caption {
+        padding: 15px 15px 50px;
+
+        h3 {
+          font-size: 25px;
+          line-height: 30px;
+        }
+        p {
+          font-size: 10px;
+          line-height: 12px;
+        }
+      }
+    }
   }
   #partners {
     .partners-list {
       display: block;
 
       li {
-        @include size(50%, 120);
+        @include size(50%, 120px);
         display: block;
         float: left;
 
@@ -335,9 +412,21 @@ $sreen_mobile_xs: 414px;
     }
   }
 
-  .overlay {
-    h1 {
-      font-size: $title-size;
+  .content-figure {
+    & > figcaption {
+      display: block;
+    }
+  }
+  .box {
+    h2 {
+      font-size: 16px;
+      line-height: 18px;
+    }
+    ul {
+      li {
+        font-size: 12px;
+        line-height: 14px;
+      }
     }
   }
 
