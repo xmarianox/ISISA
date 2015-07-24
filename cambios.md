@@ -1,15 +1,10 @@
 # Cambios
 
 ## FALTANTES
-
 * colocar codigo Analitics real
 
-1-FTP:
-El ftp esta en fibertel y es isisa. com.ar
-Para entrar el usuario es " isisa " y la contraseña "insumos2014"
-
 * Laboratorio. Mejorar lectura de Título: Separar LABORATORIO. de: Calidad, Investigación y Desarrollo (ahora queda muy junto y se confunde la lectura)
-* Lo vemos mañana
+Lo vemos mañana
 
 ## CERRADOS
 
