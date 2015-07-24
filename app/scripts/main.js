@@ -39,6 +39,54 @@ function initialize() {
 		infowindow.open(map, marker);
 	});
 }
+// Process del envio.
+function enviado() {
+	'use strict';
+	$('#contact_form').hide();
+	$('#success_message').show();
+}
+// Contacto.
+function contacto() {
+	'use strict';
+	// Data.
+	var urlDestination = 'backend/sendmail.php',
+	name = $('#name').val().trim().replace('Nombre', ''),
+	email = $('#email').val().trim().replace('Email', ''),
+	message = $('#message').val().trim();
+	// ragexs
+	var regexpChars = /^[a-zA-ZáéíóúüñÁÉÍÓÚÜÑ\- ]+$/;
+	var regexpMail = /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+	// validate inputs
+	if ((email === '') || (!regexpMail.test(email))) {
+		$('#email').addClass('error');
+		$('#email').val('Email inválido');
+		return false;
+	} else if ((name === '') || (!regexpChars.test(name))) {
+		$('#name').addClass('error');
+		$('#name').val('Nombre inválido');
+		return false;
+	} else if (message === '') {
+		$('#message').addClass('error');
+		return false;
+	} else {
+		// Envio del AJAX
+		$.ajax({
+			type: 'POST',
+			url: urlDestination,
+			data: {
+				'form': 'contacto',
+				'nombre': name,
+				'mail': email,
+				'consulta': message
+			},
+			success: function(data) {
+				enviado();
+				console.log('Envio de datos OK!' + data);
+			}
+		});
+		return false;
+	}
+}
 // Initialize google Maps
 google.maps.event.addDomListener(window, 'load', initialize);
 // Load event
@@ -106,5 +154,30 @@ $(document).ready(function() {
 	$('.map_overlay').click(function() {
 		$(this).addClass('hide');
 	});
-
+	// contacto.
+	$('#email').on('focus', function(event) {
+		event.preventDefault();
+		if ($(this).hasClass('error')) {
+			$(this).removeClass('error');
+			$(this).val('');
+		}
+	});
+	$('#name').on('focus', function(event) {
+		event.preventDefault();
+		if ($(this).hasClass('error')) {
+			$(this).removeClass('error');
+			$(this).val('');
+		}
+	});
+	$('#message').on('focus', function(event) {
+		event.preventDefault();
+		if ($(this).hasClass('error')) {
+			$(this).removeClass('error');
+			$(this).val('');
+		}
+	});
+	$('#submitContact').click(function(event) {
+		event.preventDefault();
+		contacto();
+	});
 });

@@ -9,8 +9,9 @@ $sreen_mobile_xl: 600px;
 $sreen_mobile_xs: 414px;
 
 // DESKTOP
-@media($sreen_md) {
+@media(max-width: $sreen_md) {
   $title-size: 75px;
+  $title-line-height: 78px;
   $sub-title-size: 65px;
   $accordeon-title: 24px;
   $accordeon-title-line-height: 28px;
@@ -24,6 +25,18 @@ $sreen_mobile_xs: 414px;
   }
   article {
     margin-top: 54px;
+  }
+  section {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+    }
+  }
+  .overlay {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+    }
   }
   .content-figure {
     &._50 {
@@ -58,6 +71,9 @@ $sreen_mobile_xs: 414px;
     &.logo_isisa {
       @include size(124px, 32px);
     }
+    &.isologo_isisa {
+      @include size(160px, 160px);
+    }
   }
   #nav-icon {
     @include size(45px, 30px);
@@ -66,17 +82,46 @@ $sreen_mobile_xs: 414px;
 }
 // TABLET
 @media(max-width: $sreen_tablet_land) {
+  $accordeon-title: 20px;
+  $accordeon-title-line-height: 26px;
+
   section {
     &#mezclas, &#mercados, &#laboratorio, &#instalaciones {
       background-position: center center;
       background-attachment: initial;
     }
   }
+  #content_video {
+    @include size(117%, 100%);
+  }
+  .blue_overlay {
+    padding: 0 16px;
+    p {
+      font-size: $accordeon-title;
+      line-height: $accordeon-title-line-height;
+    }
+  }
+  .download img {
+    @include size(60px, auto);
+  }
+  .btn {
+    &.btn_descargar {
+      background-size: cover;
+      @include size(95px, 89px);
+    }
+  }
+  footer {
+    @include size(100%, auto);
+    .copy {
+      width: calc(100% - 150px);
+    }
+  }
 }
 
 @media(max-width: $sreen_tablet_port) {
-  $title-size: 55px;
-  $sub-title-size: 45px;
+  $title-size: 60px;
+  $title-line-height: 65px;
+  $sub-title-size: 55px;
 
   .btn {
     &.btn_descargar {
@@ -84,7 +129,6 @@ $sreen_mobile_xs: 414px;
       background-size: cover;
     }
   }
-
   section {
     &#nosotros {
       background: url(../images/video-size.jpg) center center no-repeat;
@@ -106,6 +150,20 @@ $sreen_mobile_xs: 414px;
       background: url(../images/instalaciones/bg-instalaciones-mobile.jpg) center center no-repeat;
       background-size: cover;
     }
+
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+    }
+  }
+  .overlay {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+      span {
+        font-size: $sub-title-size;
+      }
+    }
   }
   #content_video {
     display: none;
@@ -120,19 +178,16 @@ $sreen_mobile_xs: 414px;
   }
   #laboratorio {
     h1 {
+      em {
+        font-size: $title-size;
+        line-height: $title-size;
+      }
       span {
         font-size: 22px;
         line-height: 22px;
       }
     }
   }
-  footer {
-    @include size(100%, auto);
-    .copy {
-      width: calc(100% - 150px);
-    }
-  }
-
   // ACCORDEON
   .accordeon_content {
     .control {
@@ -158,6 +213,10 @@ $sreen_mobile_xs: 414px;
     }
     .col_80 {
       padding: 20px;
+    }
+
+    img {
+      width: 100%;
     }
   }
   .content {
@@ -199,19 +258,31 @@ $sreen_mobile_xs: 414px;
       vertical-align: top;
     }
   }
+  .box {
+    h2 {
+      font-size: 30px;
+      line-height: 35px;
+    }
+    ul {
+      li {
+        font-size: 22px;
+        line-height: 26px;
+      }
+    }
+  }
 }
 
 // MOBILE
 @media(max-width: $sreen_mobile_xl) {
   $title-size: 45px;
   $sub-title-size: 35px;
-  
+
   .overlay {
     .isologo_isisa {
       margin: 10% auto 30px;
     }
   }
-  
+
   .content-figure {
     &._50 {
       &:first-child {

@@ -211,8 +211,8 @@
 
 		h2 {
 			font-family: $Helvetica_T;
-			font-size: 35px;
-			line-height: 40px;
+			font-size: 40px;
+			line-height: 45px;
 			@include text-shadow(1px 1px 1px, $black-50);
 			@include position(absolute, auto, 20px, 0px, auto);
 		}
@@ -291,8 +291,8 @@
 
 	h2 {
 		font-family: $Helvetica_B;
-		font-size: 18px;
-		line-height: 20px;
+		font-size: 17px;
+		line-height: 18px;
 		margin-bottom: 3px;
 	}
 
@@ -302,8 +302,8 @@
 
 		li {
 			font-family: $Helvetica_L;
-			font-size: 15px;
-			line-height: 18px;
+			font-size: 14px;
+			line-height: 17px;
 		}
 	}
 }
