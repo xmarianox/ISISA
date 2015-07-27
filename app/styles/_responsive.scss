@@ -1,5 +1,6 @@
 //_responsive.scss
 // screen size
+$sreen_laptop_big:1440px;
 $sreen_md: 1366px;
 // tablet
 $sreen_tablet_land: 1024px;
@@ -8,6 +9,21 @@ $sreen_tablet_port: 768px;
 $sreen_mobile_xl_port: 960px;
 $sreen_mobile_xl: 600px;
 $sreen_mobile_xs: 414px;
+$sreen_mobile_xxs: 320px;
+
+@media (max-width: $sreen_laptop_big) {
+  $title-size: 75px;
+  $title-line-height: 78px;
+
+  #contacto {
+    .header_contact {
+      h3 {
+        font-size: $title-size;
+        line-height: $title-line-height;
+      }
+    }
+  }
+}
 
 // DESKTOP
 @media(max-width: $sreen_md) {
@@ -39,6 +55,14 @@ $sreen_mobile_xs: 414px;
       line-height: $title-line-height;
     }
   }
+  #contacto {
+    .header_contact {
+      h3 {
+        font-size: $sub-title-size;
+        line-height: $title-line-height;
+      }
+    }
+  }
   .content-figure {
     &._50 {
       &:first-child {
@@ -67,7 +91,6 @@ $sreen_mobile_xs: 414px;
       vertical-align: top;
     }
   }
-
   .logo {
     &.logo_isisa {
       @include size(124px, 32px);
@@ -81,6 +104,7 @@ $sreen_mobile_xs: 414px;
     margin: 2px auto;
   }
 }
+
 // TABLET
 @media(max-width: $sreen_tablet_land) {
   $accordeon-title: 20px;
@@ -241,8 +265,8 @@ $sreen_mobile_xs: 414px;
 
     h2 {
       font-family: $Helvetica_L;
-      font-size: $accordeon-title;
-      line-height: $accordeon-title-line-height;
+      font-size: 40px;
+      line-height: 45px;
     }
 
     p {
@@ -319,7 +343,6 @@ $sreen_mobile_xs: 414px;
       @include size(120px, 120px);
     }
   }
-
   // LOGISTICA
   #logistica {
     .bx-wrapper {
@@ -336,6 +359,14 @@ $sreen_mobile_xs: 414px;
         max-width: 100%;
         padding: 15px 15px 80px;
       }
+    }
+  }
+  footer {
+    .copy {
+      width: calc(100% - 120px);
+      text-align: right;
+      line-height: 12px;
+      font-size: 10px;
     }
   }
 }
@@ -368,6 +399,7 @@ $sreen_mobile_xs: 414px;
 
   #laboratorio {
     h1 {
+      margin-top: 5%;
       em {
         font-size: $title-line-height;
         line-height: $title-line-height;
@@ -386,17 +418,18 @@ $sreen_mobile_xs: 414px;
         padding: 15px 15px 50px;
 
         h3 {
-          font-size: 25px;
-          line-height: 30px;
+          font-size: 22px;
+          line-height: 28px;
         }
         p {
-          font-size: 10px;
-          line-height: 12px;
+          font-size: 12px;
+          line-height: 14px;
         }
       }
     }
   }
   #partners {
+    padding: 16px;
     .partners-list {
       display: block;
 
@@ -411,7 +444,6 @@ $sreen_mobile_xs: 414px;
       }
     }
   }
-
   .content-figure {
     & > figcaption {
       display: block;
@@ -430,4 +462,122 @@ $sreen_mobile_xs: 414px;
     }
   }
 
+}
+
+@media(max-width: $sreen_mobile_xxs) {
+  $title-size: 28px;
+  $title-line-height: 30px;
+  $sub-title-size: 25px;
+
+  .logo {
+    &.isologo_isisa {
+      @include size(100px, 100px);
+    }
+  }
+  .btn {
+    &.btn_mouse {
+      @include size(24px,60px);
+      background-size: cover;
+    }
+  }
+  section {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+    }
+  }
+  .overlay {
+    h1 {
+      font-size: $title-size;
+      line-height: $title-line-height;
+      span {
+        font-size: $sub-title-size;
+        line-height: $title-line-height;
+      }
+    }
+    .btn_plus {
+      bottom: 30%;
+    }
+  }
+  #laboratorio {
+    h1 {
+      em {
+        font-size: $title-line-height;
+        line-height: $title-line-height;
+      }
+      span {
+        font-size: 18px;
+        line-height: 20px;
+      }
+    }
+  }
+  #mercados {
+    .label_span {
+      @include size(90%, auto);
+
+      p {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+  }
+  #partners {
+    .title-separator {
+      h3 {
+        font-size: $title-size;
+        line-height: $title-line-height;
+      }
+    }
+  }
+  .content {
+    padding: 16px;
+  }
+  .accordeon_content {
+    .col_25 {
+      padding: 16px;
+    }
+    h2 {
+      font-size: 20px;
+      line-height: 24px;
+      margin-bottom: 15px;
+    }
+    p {
+      font-size: 14px;
+      line-height: 18px;
+    }
+    ul {
+      padding-left: 25px;
+      li {
+        font-size: 14px;
+        line-height: 18px;
+      }
+    }
+    figcaption {
+      h2 {
+        font-size: 30px;
+        line-height: 34px;
+      }
+    }
+  }
+  .blue_overlay {
+    h2 {
+      font-size: 30px;
+      line-height: 34px;
+    }
+  }
+  .box {
+    padding: 5px;
+    h2 {
+      font-size: 13px !important;
+      line-height: 15px !important;
+      margin-bottom: 0px;
+    }
+    ul {
+      padding: 0;
+      li {
+        font-size: 10px;
+        line-height: 12px;
+      }
+    }
+  }
 }

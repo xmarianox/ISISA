@@ -125,6 +125,11 @@ $(document).ready(function() {
 		$(this).toggleClass('open');
 		$('.menu').toggleClass('open animated fadeIn');
 	});
+	// menu item click
+	$('.menu li a').click(function() {
+		$('#nav-icon').removeClass('open');
+		$('.menu').toggleClass('open animated fadeIn');
+	});
 	// mas info
 	$('.btn_plus').click(function(event){
 		event.preventDefault();

@@ -566,10 +566,14 @@ iframe {
 }
 
 #success_message {
-  font-family: $Helvetica_T;
-  font-size: 22px;
-  line-height: 32px;
   display: none;
+  padding-top: 30px;
+  p {
+    font-family: $Helvetica_B;
+    text-align: center;
+    font-size: 32px;
+    line-height: 38px;
+  }
 }
 
 // Footer

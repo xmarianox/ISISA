@@ -41,9 +41,9 @@
 	}
 
 	img {
+		@include size(100%, auto);
 		max-width: 100%;
 		display: block;
-		height: auto;
 	}
 
 	.control {
@@ -215,6 +215,7 @@
 			line-height: 45px;
 			@include text-shadow(1px 1px 1px, $black-50);
 			@include position(absolute, auto, 20px, 0px, auto);
+			margin-bottom: 0px;
 		}
 	}
 }
@@ -259,6 +260,7 @@
 	@include size(100%, 100%);
 	max-height: 316px;
 	background: url(../images/laboratorio/laboratorio-calidad.jpg) center center no-repeat;
+	background-size: cover;
 
 	.col_20 {
 		vertical-align: middle;
@@ -313,6 +315,7 @@
 	overflow: hidden;
 
 	img {
+		@include size(auto, auto);
 		display: inline-block;
 		margin: 0 15px;
 	}
