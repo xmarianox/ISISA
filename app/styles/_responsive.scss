@@ -347,9 +347,8 @@ $sreen_mobile_xxs: 320px;
   #logistica {
     .bx-wrapper {
       .bx-controls-direction a {
-        width: 35px;
-        height: 83px;
-        top: 30%;
+        @include size(35px,83px);
+        top: 20%;
         background-size: cover;
       }
       .custom_caption {
@@ -376,6 +375,11 @@ $sreen_mobile_xxs: 320px;
   $title-line-height: 45px;
   $sub-title-size: 25px;
 
+  .btn {
+    &.btn_mouse {
+      display: none;
+    }
+  }
   .menu {
     max-width: 100%;
   }
@@ -399,19 +403,22 @@ $sreen_mobile_xxs: 320px;
 
   #laboratorio {
     h1 {
-      margin-top: 5%;
+      margin-top: 6%;
+      @include text-shadow(1px 1px 1px, $white-50);
       em {
         font-size: $title-line-height;
         line-height: $title-line-height;
+      }
+      span {
+        display: none;
       }
     }
   }
   #logistica {
     .bx-wrapper {
       .bx-controls-direction a {
-        width: 35px;
-        height: 83px;
-        top: 30%;
+        @include size(25px, 70px);
+        top: 20%;
         background-size: cover;
       }
       .custom_caption {
@@ -474,12 +481,6 @@ $sreen_mobile_xxs: 320px;
       @include size(100px, 100px);
     }
   }
-  .btn {
-    &.btn_mouse {
-      @include size(24px,60px);
-      background-size: cover;
-    }
-  }
   section {
     h1 {
       font-size: $title-size;
@@ -496,7 +497,7 @@ $sreen_mobile_xxs: 320px;
       }
     }
     .btn_plus {
-      bottom: 30%;
+      bottom: 10%;
     }
   }
   #laboratorio {
@@ -504,10 +505,6 @@ $sreen_mobile_xxs: 320px;
       em {
         font-size: $title-line-height;
         line-height: $title-line-height;
-      }
-      span {
-        font-size: 18px;
-        line-height: 20px;
       }
     }
   }
