@@ -19,13 +19,11 @@ function openMasInfo(target){
 	'use strict';
 	$(target).addClass('visible animated slideInUp');
 	$('a[href=' + target + '].btn_plus').text('-');
-	if($(window).width()>768){
-		$('html,body').stop().animate({ 'scrollTop': $(target).prev().offset().top + $(target).outerHeight() }, 400);	
-	}
-	else{
+	if($(window).width() > 768) {
+		$('html,body').stop().animate({ 'scrollTop': $(target).prev().offset().top + $(target).outerHeight() }, 400);
+	} else {
 		$('html,body').stop().animate({ 'scrollTop': $(target).offset().top - $('header').outerHeight()}, 400);
 	}
-	
 }
 // Google maps api.
 function initialize() {
@@ -137,8 +135,7 @@ $(document).ready(function() {
 		$('.menu').toggleClass('open animated fadeIn');
 	});
 	// mas info
-	$('.btn_plus').click(function(event){
-		//event.preventDefault();
+	$('.btn_plus').click(function(){
 		var target = $(this).attr('href');
 		if($(target).hasClass('visible')){
 			$(target).removeClass('visible animated slideInUp');
