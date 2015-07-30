@@ -114,7 +114,7 @@ $(document).ready(function() {
 	$('a[href*=#]:not([href=#], .btn_plus)').click(function() {
 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 			var target = $(this.hash);
-			console.log('Target: ' + target);
+			//console.log('Target: ' + target);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
 				if(this.hash === '#nosotros'){
