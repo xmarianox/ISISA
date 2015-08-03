@@ -17,14 +17,15 @@ function loader() {
 // Mas info
 function openMasInfo(target){
 	'use strict';
-	$(target).addClass('visible animated slideInUp');
 	$('a[href=' + target + '].btn_plus').text('-');
 	if($(window).width() > 768){
 		console.log('scrollNormal');
+		$(target).addClass('visible animated slideInUp');
 		$('html,body').stop().animate({ 'scrollTop': $(target).prev().offset().top + $(target).outerHeight() }, 400);
 	}
 	else{
 		console.log('scrollMobile');
+		$(target).addClass('visible');
 		$('html,body').stop().animate({ 'scrollTop': $(target).offset().top - $('header').outerHeight()}, 400);
 	}
 }
