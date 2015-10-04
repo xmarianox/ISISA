@@ -5,19 +5,22 @@
 	cursor: pointer;
 
 	&.logo_isisa {
-		background: url(../images/logos/logo_isisa.svg) center center no-repeat;
+		//background: url(../images/logos/logo_isisa.svg) center center no-repeat;
+		background: url(../images/logos/logo_isisa.png) center center no-repeat;
 		background-size: cover;
 		@include size(161px, 41px);
 	}
 
 	&.isologo_isisa {
-		background: url(../images/logos/isologo_isisa.svg) center center no-repeat;
+		//background: url(../images/logos/isologo_isisa.svg) center center no-repeat;
+		background: url(../images/logos/isologo_isisa.png) center center no-repeat;
 		background-size: cover;
 		@include size(180px, 180px);
 	}
 
 	&.logo_isisa_inverse {
-		background: url(../images/logos/logo_isisa_footer.svg) center center no-repeat;
+		//background: url(../images/logos/logo_isisa_footer.svg) center center no-repeat;
+		background: url(../images/logos/logo_isisa_footer.png) center center no-repeat;
 		background-size: cover;
 		@include size(110px, 29px);
 	}
