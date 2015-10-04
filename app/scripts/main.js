@@ -17,11 +17,15 @@ function loader() {
 // Mas info
 function openMasInfo(target){
 	'use strict';
-	$(target).addClass('visible animated slideInUp');
 	$('a[href=' + target + '].btn_plus').text('-');
-	if($(window).width() > 768) {
+	if($(window).width() > 768){
+		console.log('scrollNormal');
+		$(target).addClass('visible animated slideInUp');
 		$('html,body').stop().animate({ 'scrollTop': $(target).prev().offset().top + $(target).outerHeight() }, 400);
-	} else {
+	}
+	else{
+		console.log('scrollMobile');
+		$(target).addClass('visible');
 		$('html,body').stop().animate({ 'scrollTop': $(target).offset().top - $('header').outerHeight()}, 400);
 	}
 }
@@ -111,7 +115,7 @@ $(document).ready(function() {
 	$('a[href*=#]:not([href=#], .btn_plus)').click(function() {
 		if (location.pathname.replace(/^\//, '') === this.pathname.replace(/^\//, '') && location.hostname === this.hostname) {
 			var target = $(this.hash);
-			console.log('Target: ' + target);
+			//console.log('Target: ' + target);
 			target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
 			if (target.length) {
 				if(this.hash === '#nosotros'){
@@ -135,7 +139,8 @@ $(document).ready(function() {
 		$('.menu').toggleClass('open animated fadeIn');
 	});
 	// mas info
-	$('.btn_plus').click(function(){
+	$('.btn_plus').click(function(event){
+		event.preventDefault();
 		var target = $(this).attr('href');
 		if($(target).hasClass('visible')){
 			$(target).removeClass('visible animated slideInUp');
