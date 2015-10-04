@@ -38,9 +38,9 @@ ehthumbs.db
 Thumbs.db
 
 ### Configuracion del proyecto
-node_modules
-dist
-.tmp
-.sass-cache
-bower_components
-test/bower_components
+/node_modules
+/dist
+/.tmp
+/.sass-cache
+/bower_components
+/test/bower_components
